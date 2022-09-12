@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['eslint:recommended', 'react-app', 'plugin:prettier/recommended', 'plugin:@typescript-eslint/recommended'],
+  extends: ['eslint:recommended', 'react-app', 'plugin:@typescript-eslint/recommended'],
   overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {
