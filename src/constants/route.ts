@@ -1,6 +1,5 @@
 export const ROUTES = {
-    Index: "/",
-    Home: "home",
-    Product: "product"
-}
-
+  Index: '/',
+  Home: 'home',
+  Product: 'product',
+};

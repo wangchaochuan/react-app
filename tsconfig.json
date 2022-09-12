@@ -1,66 +1,38 @@
 {
-    "compilerOptions": {
-        "baseUrl": ".",
-        "target": "es5",
-        "lib": [
-            "dom",
-            "dom.iterable",
-            "esnext"
-        ],
-        "allowJs": true,
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "noFallthroughCasesInSwitch": true,
-        "module": "esnext",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "noEmit": true,
-        "downlevelIteration": true,
-        "jsx": "react-jsx",
-        "paths": {
-            "@/*": [
-                "src/*"
-            ],
-            "@assets/*": [
-                "src/assets/*"
-            ],
-            "@components/*": [
-                "src/components/*"
-            ],
-            "@constants/*": [
-                "src/constants/*"
-            ],
-            "@containers/*": [
-                "src/containers/*"
-            ],
-            "@hooks/*": [
-                "src/hooks/*"
-            ],
-            "@mocks/*": [
-                "src/mocks/*"
-            ],
-            "@routes/*": [
-                "src/routes/*"
-            ],
-            "@services/*": [
-                "src/services/*"
-            ],
-            "@styles/*": [
-                "src/styles/*"
-            ],
-            "@types/*": [
-                "src/types/*"
-            ],
-            "@utils/*": [
-                "src/utils/*"
-            ],
-        }
-    },
-    "include": [
-        "src"
-    ]
+  "compilerOptions": {
+    // 模块解析根路径，默认为 tsconfig.json 位于的目录
+    "baseUrl": ".",
+    // 指定输出 ECMAScript 版本，默认为 es5
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "downlevelIteration": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@constants/*": ["src/constants/*"],
+      "@containers/*": ["src/containers/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@mocks/*": ["src/mocks/*"],
+      "@routes/*": ["src/routes/*"],
+      "@services/*": ["src/services/*"],
+      "@styles/*": ["src/styles/*"],
+      "@types/*": ["src/types/*"],
+      "@utils/*": ["src/utils/*"]
+    }
+  },
+  "include": ["src"]
 }

@@ -1,7 +1,7 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 const Product: FC = () => {
-    return <div>product</div>
-}
+  return <div>product</div>;
+};
 
 export default Product;
