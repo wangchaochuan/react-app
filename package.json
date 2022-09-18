@@ -27,13 +27,15 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "husky": "^8.0.0"
   },
   "scripts": {
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "lint": "eslint --fix --ext .js,.ts,.jsx,.tsx src"
+    "lint": "eslint --fix --ext .js,.ts,.jsx,.tsx src",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
