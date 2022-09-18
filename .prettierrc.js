@@ -27,7 +27,7 @@ module.exports = {
     // 18. vue script和style标签中是否缩进,开启可能会破坏编辑器的代码折叠
     vueIndentScriptAndStyle: false,
     // 19.    endOfLine: "<lf|crlf|cr|auto>" 行尾换行符,默认是lf,
-    endOfLine: 'lf',
+    endOfLine: 'auto',
     // 20.embeddedLanguageFormatting: "off",默认是auto,控制被引号包裹的代码是否进行格式化
     embeddedLanguageFormatting: 'off',
 };
