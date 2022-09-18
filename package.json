@@ -35,7 +35,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "lint": "eslint --fix --ext .js,.ts,.jsx,.tsx src",
+    "lint": "eslint -c .eslintrc.js src --ext .ts,.tsx,.js,.jsx --fix",
     "prepare": "husky install"
   },
   "eslintConfig": {
@@ -58,7 +58,7 @@
   },
   "lint-staged":{
     "src/**/*.{ts,tsx,js,jsx}":[
-        "npm run lint"
+        "eslint -c .eslintrc.js --fix"
     ]
   }
 }
