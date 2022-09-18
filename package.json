@@ -27,8 +27,9 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
-    "prettier": "^2.7.1",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
   },
   "scripts": {
     "start": "craco start",
@@ -53,6 +54,11 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "lint-staged":{
+    "src/**/*.{ts,tsx,js,jsx}":[
+        "npm run lint"
     ]
   }
 }
