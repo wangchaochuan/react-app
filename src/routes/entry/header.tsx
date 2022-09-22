@@ -15,7 +15,7 @@ const Header: FC = () => {
         {routes.map(({ path, name }) => {
           return (
             <Fragment key={path}>
-              <NavLink to={path} className={({ isActive }) => isActive && styles.active}>
+              <NavLink to={path} className={({ isActive }) => (isActive ? styles.active : '')}>
                 {name}
               </NavLink>
             </Fragment>
