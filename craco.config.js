@@ -1,9 +1,8 @@
 const path = require('path');
+const { name } = require('./package.json');
 
 module.exports = {
-  devServer: {
-    port: '8083',
-  },
+  reactScriptsVersion: 'react-scripts' /* (default value) */,
   webpack: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
@@ -20,10 +19,21 @@ module.exports = {
       '@utils': path.resolve(__dirname, 'src/utils'),
       '@contexts': path.resolve(__dirname, 'src/contexts'),
     },
-    configure(webpackConfig, { env }) {
+    configure(webpackConfig) {
       // 配置扩展扩展名
       webpackConfig.resolve.extensions = [...webpackConfig.resolve.extensions, ...['.scss', '.css']];
+
+      webpackConfig.output.library = `${name}-[name]`;
+      webpackConfig.output.libraryTarget = 'umd';
+      // webpackConfig.output.jsonpFunction = `webpackJsonp_${name}`;
+      webpackConfig.output.globalObject = 'window';
       return webpackConfig;
+    },
+  },
+  devServer: {
+    port: 3001,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
     },
   },
 };

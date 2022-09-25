@@ -8,6 +8,9 @@ const Header: FC = () => {
     { path: `/${ROUTES.Home}`, name: '主页' },
     { path: `/${ROUTES.Product}`, name: '产品' },
   ];
+  if (window.__POWERED_BY_QIANKUN__) {
+    return null;
+  }
   return (
     <div className={styles.header}>
       <div className={styles.left}></div>

@@ -8,7 +8,7 @@ import SuspenseWrap from '@components/suspense-wrap';
 const Home = lazy(() => import('@routes/home'));
 const Product = lazy(() => import('@routes/product'));
 
-const App = () => {
+const Main = () => {
   return (
     <Routes>
       <Route path={`${ROUTES.Index}*`} element={<SuspenseWrap render={<Layout />}></SuspenseWrap>}>
@@ -20,4 +20,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Main;

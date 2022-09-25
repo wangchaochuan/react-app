@@ -24,5 +24,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 2,
     '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/no-non-null-assertion': 0,
+    '@typescript-eslint/no-var-requires': 0,
   },
 };
