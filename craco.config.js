@@ -1,38 +1,42 @@
 const path = require('path');
 const { name } = require('./package.json');
 
+const pathResolve = pathUrl => path.join(__dirname, pathUrl);
+
 module.exports = {
   reactScriptsVersion: 'react-scripts' /* (default value) */,
   webpack: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-      '@assets': path.resolve(__dirname, 'src/assets'),
-      '@components': path.resolve(__dirname, 'src/components'),
-      '@constants': path.resolve(__dirname, 'src/constants'),
-      '@containers': path.resolve(__dirname, 'src/containers'),
-      '@hooks': path.resolve(__dirname, 'src/hooks'),
-      '@mocks': path.resolve(__dirname, 'src/mocks'),
-      '@routes': path.resolve(__dirname, 'src/routes'),
-      '@services': path.resolve(__dirname, 'src/services'),
-      '@styles': path.resolve(__dirname, 'src/styles'),
-      '@types': path.resolve(__dirname, 'src/types'),
-      '@utils': path.resolve(__dirname, 'src/utils'),
-      '@contexts': path.resolve(__dirname, 'src/contexts'),
+      '@': pathResolve('src'),
+      '@assets': pathResolve('src/assets'),
+      '@components': pathResolve('src/components'),
+      '@constants': pathResolve('src/constants'),
+      '@containers': pathResolve('src/containers'),
+      '@hooks': pathResolve('src/hooks'),
+      '@mocks': pathResolve('src/mocks'),
+      '@routes': pathResolve('src/routes'),
+      '@services': pathResolve('src/services'),
+      '@styles': pathResolve('src/styles'),
+      '@types': pathResolve('src/types'),
+      '@utils': pathResolve('src/utils'),
+      '@contexts': pathResolve('src/contexts'),
     },
     configure(webpackConfig) {
       // 配置扩展扩展名
       webpackConfig.resolve.extensions = [...webpackConfig.resolve.extensions, ...['.scss', '.css']];
-
+      // 接入微前端框架qiankun的配置,不接入微前端可以不需要
       webpackConfig.output.library = `${name}-[name]`;
       webpackConfig.output.libraryTarget = 'umd';
-      // webpackConfig.output.jsonpFunction = `webpackJsonp_${name}`;
       webpackConfig.output.globalObject = 'window';
       return webpackConfig;
     },
   },
   devServer: {
+    // 本地服务的端口号
     port: 3001,
+    // 本地服务的响应头设置
     headers: {
+      // 允许跨域
       'Access-Control-Allow-Origin': '*',
     },
   },

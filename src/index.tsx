@@ -1,18 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import './public-path';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from '@/App';
+import reportWebVitals from '@/reportWebVitals';
+import { isInMicroApp } from '@/utils';
+import 'moment/locale/zh-cn';
+import 'antd/dist/antd.css';
+import '@/index.css';
+import '@/public-path';
 
-// 独立运行时
-if (!window.__POWERED_BY_QIANKUN__) {
-  const root = ReactDOM.createRoot(document.getElementById('react-root') as HTMLElement);
+function render(root: ReactDOM.Root, basename: string) {
   root.render(
     <React.StrictMode>
-      <App />
+      <App basename={basename} />
     </React.StrictMode>
   );
+}
+
+// 独立运行时
+if (!isInMicroApp) {
+  const root = ReactDOM.createRoot(document.getElementById('react-root') as HTMLElement);
+  render(root, '/');
 
   // If you want to start measuring performance in your app, pass a function
   // to log results (for example: reportWebVitals(console.log))
@@ -44,12 +51,8 @@ export async function mount(props: TMicroAppProps) {
   console.log('react-app mounted', props, basename);
   const el = container ? container.querySelector('#react-root') : document.getElementById('react-root');
   if (el) {
-    const root = ReactDOM.createRoot(el!);
-    root.render(
-      <React.StrictMode>
-        <App basename={basename} />
-      </React.StrictMode>
-    );
+    const root = ReactDOM.createRoot(el);
+    render(root, basename);
   }
 }
 

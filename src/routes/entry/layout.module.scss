@@ -6,4 +6,7 @@
     & > .content {
         flex: 1;
     }
+    &.in-micro {
+        height: calc(100vh - 56px);
+    }
 }

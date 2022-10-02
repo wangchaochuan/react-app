@@ -1,6 +1,7 @@
 import { FC, Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ROUTES } from '@constants/route';
+import { isInMicroApp } from '@/utils';
 import styles from './header.module.scss';
 
 const Header: FC = () => {
@@ -8,7 +9,7 @@ const Header: FC = () => {
     { path: `/${ROUTES.Home}`, name: '主页' },
     { path: `/${ROUTES.Product}`, name: '产品' },
   ];
-  if (window.__POWERED_BY_QIANKUN__) {
+  if (isInMicroApp) {
     return null;
   }
   return (
