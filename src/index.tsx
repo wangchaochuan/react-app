@@ -5,7 +5,7 @@ import reportWebVitals from '@/reportWebVitals';
 import { isInMicroApp } from '@/utils';
 import 'moment/locale/zh-cn';
 import 'antd/dist/antd.css';
-import '@/index.css';
+import '@/index.scss';
 import '@/public-path';
 
 function render(root: ReactDOM.Root, basename: string) {

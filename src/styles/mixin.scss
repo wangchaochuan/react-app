@@ -1,0 +1,85 @@
+// 文字超出显示省略号
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+//文字超出几行显示省略号
+@mixin ellipsis-multi($line) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    overflow: hidden;
+  }
+}
+
+@mixin disabled($bgColor: #e6e6e6, $textColor: #ababab) {
+  background-color: $bgColor !important;
+  color: $textColor !important;
+  cursor: not-allowed !important;
+}
+
+@mixin center($type, $zIndex: 1) {
+  @if $type == "flex" {
+    display: flex;
+    align-items: center;
+  }
+
+  @if $type == "absolute" {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: $zIndex;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+@mixin btntheme($color) {
+  color: #fff;
+  background-color: $color;
+  border-color: $color;
+
+  &:hover {
+    color: #fff;
+    border-color: rgba($color, 0.9);
+    background-color: rgba($color, 0.9);
+  }
+
+  &:active,
+  &:focus {
+    color: #fff;
+    border-color: $color;
+    background-color: $color;
+  }
+}
+
+@mixin inputtheme($border-color) {
+  border-color: transparent !important;
+  background-color: $input-background-normal-color !important;
+
+  &:hover {
+    border-color: $input-border-hover-color;
+    background-color: transparent;
+  }
+
+  &:focus {
+    border-color: $input-border-hover-color !important;
+    box-shadow: 0 0 0 3px $input-shadow-color !important;
+    background-color: transparent !important;
+  }
+}

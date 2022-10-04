@@ -1,0 +1,768 @@
+:root[theme="light"],
+div[data-theme="light"] {
+  /* --- START 通用 START --- */
+  --custom-branch-background: #f6f7f8;
+  --custom-branch-content-background: #ffffff;
+  --theme-color: rgba(76, 92, 219, 1);
+  --custom-primary-color: rgba(76, 92, 219, 1);
+  --custom-primary-color-hover: rgba(76, 92, 219, 0.8);
+  --custom-primary-color-active: rgba(53, 70, 200, 1);
+  --custom-primary-color-disabled: rgba(76, 92, 219, 0.5);
+  --custom-primary-color-light: #4c5cdb4d;
+  --custom-primary-color-lighter: #4c5cdb1f;
+  --custom-primary-color-lightest: #4c5cdb14;
+  /*  >>> Info */
+  --custom-info-color: #5dbacc;
+  --custom-info-color-hover: #57a4cc;
+  --custom-info-color-active: #57a4cc;
+  --custom-info-color-disabled: #57a4cc;
+  /*  >>> Success */
+  --custom-success-color: rgba(36, 180, 147, 1);
+  --custom-success-color-hover: rgba(36, 180, 147, 0.8);
+  --custom-success-color-active: rgba(3, 159, 123, 1);
+  --custom-success-color-disabled: rgba(36, 180, 147, 0.5);
+  --custom-success-color-light: #24b4934d;
+  --custom-success-color-lighter: #24b4931f;
+  --custom-success-color-lightest: #24b49314;
+  /*  >>> Warning */
+  --custom-warning-color: #ff9900;
+  --custom-warning-color-hover: rgba(255, 153, 0, 0.8);
+  --custom-warning-color-active: #f67a00;
+  --custom-warning-color-disabled: rgba(255, 153, 0, 0.5);
+  /* >>> Error */
+  --custom-error-color: rgba(255, 85, 104, 1);
+  --custom-error-color-hover: rgba(255, 85, 104, 0.8);
+  --custom-error-color-active: rgba(235, 46, 67, 1);
+  --custom-error-color-disabled: rgba(255, 85, 104, 0.5);
+
+  /*  滚动条颜色 */
+  --custom-scroll-bar-color: #181f434d;
+  /*  滚动条大小 */
+  --custom-scroll-bar-size: 5px;
+  /* 页面背景 */
+  --custom-body-background: #ffffff;
+  /* 基础字体颜色 */
+  --custom-text-color-base: #181f43ff;
+  /* 基础字体hover颜色 */
+  --custom-text-color-base-hover: #181f43ff;
+  /* 标题字体颜色 */
+  --custom-text-color-title: #181f43ff;
+  /* 标题字体hover颜色 */
+  --custom-text-color-title-hover: #181f43ff;
+  /* 次标题字体颜色 */
+  --custom-text-color-subtitle: #181f43bf;
+  /* 次标题字体hover颜色 */
+  --custom-text-color-subtitle-hover: #181f43bf;
+  /* 提示字体颜色 */
+  --custom-text-color-tip: #181f4380;
+  /* 提示字体hover颜色 */
+  --custom-text-color-tip-hover: #181f4380;
+  /* 禁用字体颜色 */
+  --custom-text-color-disabled: #181f434d;
+  /* 禁用字体hover颜色 */
+  --custom-text-color-disabled-hover: #181f434d;
+  /* 说明字体颜色 */
+  --custom-text-color-caption: #181f4380;
+  /* 暗示字体颜色 */
+  --custom-text-color-hint: #181f43d9;
+  /* icon字体颜色 */
+  --custom-text-color-icon: #5e6576ff;
+  /* icon字体hover颜色 */
+  --custom-text-color-icon-hover: #5e6576ff;
+  /* placeholder字体颜色 */
+  --custom-text-color-placeholder: #181f434d;
+  /* Link链接字体颜色 */
+  --custom-text-color-link-base: #4c5cdbff;
+  /* Link链接字体hover颜色 */
+  --custom-text-color-link-hover: #4c5cdbcc;
+  /* Link链接字体disabled颜色 */
+  --custom-text-color-link-disabled: #4c5cdb80;
+  /* 基础字体 */
+  --custom-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 标题字体 */
+  --custom-font-family-title: ;
+  /* 数字字体 */
+  --custom-font-family-number: ;
+  /* 英文字体 */
+  --custom-font-family-letter: ;
+  /* 基础字体大小 */
+  --custom-font-size-base: 14px;
+  /* 标题字体大小 */
+  --custom-font-size-title: 16px;
+  /* 次标题字体大小 */
+  --custom-font-size-subtitle: 14px;
+  /* 次标题字体大小 */
+  --custom-font-size-icon: 16px;
+  /* 基础行高 */
+  --custom-line-height-base: 1.5717;
+  /* 标题行高 */
+  --custom-line-height-title: 1.5717;
+  /* 次标题行高 */
+  --custom-line-height-subtitle: 1.5717;
+  /* 一级标题 */
+  --custom-heading-1-size: 28px;
+  /* 二级标题 */
+  --custom-heading-2-size: 26px;
+  /* 三级标题 */
+  --custom-heading-3-size: 20px;
+  /* 四级标题 */
+  --custom-heading-4-size: 16px;
+  /* 五级标题 */
+  --custom-heading-5-size: 14px;
+  /* 基础边框圆角 */
+  --custom-border-radius-base: 0px;
+  /* 小圆角 */
+  --custom-border-radius-small: 4px;
+  /* 迷你圆角 */
+  --custom-border-radius-mini: 2px;
+  /* 基础边框颜色 */
+  --custom-border-color-base: #181f4314;
+  /* hover边框颜色 */
+  --custom-border-color-hover: #4c5cdb80;
+  /* 提示边框颜色 */
+  --custom-border-color-tip: #181f43d9;
+  /* disabled边框颜色 */
+  --custom-border-color-disabled: #181f431f;
+  /* 基础边框宽度 */
+  --custom-border-width-base: 1px;
+  /* 中等边框宽度 */
+  --custom-border-width-base-medium: 2px;
+  /* 粗边框宽度 */
+  --custom-border-width-base-bold: 3px;
+  /* divider颜色 */
+  --custom-divider-color-base: #181f431f;
+  /* 基础背景颜色 */
+  --custom-background-color-base: #ffffff;
+  /* hover背景颜色 */
+  --custom-background-color-hover: #ffffff;
+  /* 提示背景颜色 */
+  --custom-background-color-tip: #ffffff;
+  /* 禁用背景颜色 */
+  --custom-background-color-disabled: ;
+  /* 基础阴影样式 */
+  --custom-box-shadow-base: #4c5cdb1f;
+  /* hover阴影样式 */
+  --custom-box-shadow-hover: 0px 6px 24px 0px rgba(24, 31, 67, 0.12);
+  /* 提示阴影样式 */
+  --custom-box-shadow-tip: 0px 2px 12px #000;
+  /* 禁用阴影样式 */
+  --custom-box-shadow-disabled: 0px 2px 12px #000;
+  /* --- END 通用 END --- */
+  /* 下拉列表背景色 */
+  --custom-drop-down-background-color: rgb(253, 253, 253);
+  /* 下拉列表文字颜色 */
+  --custom-drop-down-text-color: ;
+  /* 下拉列表文字hover颜色 */
+  --custom-drop-down-hover-text-color: ;
+  /* 下拉列表hover背景颜色 */
+  --custom-drop-down-hover-bg-color: rgb(237, 237, 237);
+  /* 下拉列表文字disabled颜色 */
+  --custom-drop-down-disabled-text-color: #333333;
+  /* 下拉列表disabled背景颜色 */
+  --custom-drop-down-disabled-bg-color: #333333;
+  /* tooltip背景色 */
+  --custom-tooltip-background-color: #ffffff;
+  /* popover背景色 */
+  --custom-popover-background-color: #ffffff;
+  /* card背景色 */
+  --custom-card-background-color: #ffffff;
+  /* modal背景色 */
+  --custom-modal-background-color: #ffffff;
+  /* drawer背景色 */
+  --custom-drawer-background-color: #ffffff;
+  /* mask背景色 */
+  --custom-mask-background-color: #ffffff;
+
+  // layout
+  --custom-layout-header-color: #181f43d9;
+  --custom-layout-header-bg: #ffffffff;
+  --custom-layout-content-bg: #ffffff;
+  --custom-layout-side-menu-bg: #ffffff;
+  --custom-layout-side-bg: #1827430a;
+  --custom-layout-header-shadow: #181f4314;
+  --custom-layout-editor-side-bg: #1827430a;
+  --custom-layout-editor-side-active-bg: #18274305;
+  --custom-layout-header-height: ;
+  --custom-layout-header-padding: ;
+  --custom-layout-header-outline: ;
+  --custom-layout-header-border: ;
+  --custom-layout-header-border-iamge: ;
+  --custom-layout-content-color: ;
+  --custom-layout-content-padding: ;
+  --custom-layout-content-outline: ;
+  --custom-layout-content-border: ;
+  --custom-layout-content-border-image: ;
+  --custom-layout-footer-padding: ;
+  --custom-layout-footer-color: ;
+  --custom-layout-footer-bg: ;
+  --custom-layout-footer-outline: ;
+  --custom-layout-footer-border: ;
+  --custom-layout-footer-border-image: ;
+  --custom-layout-sider-color: ;
+  --custom-layout-sider-padding: ;
+  --custom-layout-sider-outline: ;
+  --custom-layout-sider-border: ;
+  --custom-layout-sider-border-image: ;
+  /* dropdown */
+  --custom-dropdown-menu-bg: #fff;
+  --custom-dropdown-menu-item-color: #181f43ff;
+  --custom-dropdown-menu-item-hover-bg: #1827430a;
+  --custom-dropdown-menu-box-shadow: #181f4319;
+  --custom-dropdown-empty-text: #181f4380;
+  --custom-dropdown-header-border: #f0f0f0;
+
+  /* switch */
+  --custom-switch-bg-color: #181f434d;
+  --custom-switch-on-bg-color: #4c5cdb;
+  --custom-switch-text-color: #ffffff;
+  --custom-switch-circle-color: #ffffff;
+  --custom-switch-on-text-color: #ffffff;
+  --custom-switch-on-circle-color: #ffffff;
+  /* input */
+  --custom-input-bg-color: #1827430a;
+  --custom-input-background-hover-color: #ffffffff;
+  --custom-input-placeholder-color: #181f434d;
+  --custom-input-text-color: #181f43ff;
+  --custom-input-hover-border-color: #4c5cdbcc;
+  --custom-input-focus-boxshadow: #4c5cdb1f;
+  --custom-input-textarea-count-color: #181f434d;
+
+  --custom-input-disabled-border-color: #ffffff0f;
+  --custom-input-disabled-bg-color: linear-gradient(
+    -45deg,
+    #edeff1ff 0,
+    #edeff1ff 10%,
+    transparent 10%,
+    transparent 50%,
+    #edeff1ff 50%,
+    #edeff1ff 60%,
+    transparent 60%,
+    transparent
+  );
+  --custom-input-disabled-text-color: #181f43ff;
+  --custom-input-icon-color: #b1b1b2ff;
+  --custom-input-disabled-icon-color: #b1b1b2ff;
+  --custom-input-disabled-placeholder-color: #ffffffbf;
+  --custom-input-border-radius: 3px;
+
+  /* input number*/
+  --custom-input-number-control-color: #181f43ff;
+  --custom-input-number-control-border-color: #181f431f;
+  --custom-input-number-control-hover-border-color: #181f434d;
+  --custom-input-number-control-bg-color: ; // 数字输入框按钮背景颜色
+  --custom-input-number-control-hover-color: ; // 数字输入框按钮文本hover颜色
+  --custom-input-number-control-disabled-color: ; // 数字输入框按钮文本disabled颜色
+  --custom-input-number-control-disabled-bg-color: ; // 数字输入框按钮背景disabled颜色
+  // modal
+  --custom-modal-mask-bg-color: #181f438c;
+  --custom-modal-boxshadow: none;
+  --custom-modal-border-radius: 2px;
+
+  --custom-modal-title-text-color: #181f43d9;
+  --custom-modal-content-bg-color: #ffffffff;
+  --custom-modal-content-text-color: #181f43d9;
+  --custom-modal-close-color: #181f43d9;
+  --custom-modal-close-hover-color: #181f43d9;
+  --custom-modal-inner-border-color: #181f4314;
+  --custom-modal-out-border-color: transparent;
+  /* select */
+  --custom-select-disabled-background-size: 10px;
+  --custom-select-text-color: #181f43ff;
+  --custom-select-icon-color: #818a9e;
+  --custom-select-bg-color: #1827430a;
+  --custom-select-hover-bg: #ffffffff;
+  --custom-select-placeholder-color: #181f434d;
+  --custom-select-hover-border-color: #4c5cdbcc;
+  --custom-select-focus-boxshadow: #4c5cdb1f;
+  --custom-select-multiple-border-color: #181f431f;
+
+  --custom-select-border-color: #ffffff0f;
+  --custom-select-disabled-text-color: #ffffffbf;
+  --custom-select-disabled-bg-color: linear-gradient(
+    -45deg,
+    #1827430a 0,
+    #1827430a 5%,
+    transparent 5%,
+    transparent 50%,
+    #1827430a 50%,
+    #1827430a 55%,
+    transparent 55%,
+    transparent
+  );
+  --custom-select-disabled-border-color: #ffffff0f;
+  --custom-select-disabled-icon-color: #b1b1b2ff;
+  --custom-select-border-radius: 3px;
+  /* select-dropdown */
+  --custom-select-dropdown-bg-color: #ffffffff;
+  --custom-select-dropdown-option-hover-bg: #1827430a;
+  --custom-select-dropdown-text-color: #181f43ff;
+
+  --custom-select-dropdown-option-active-color: #4c5cdbff;
+  --custom-select-dropdown-option-active-bg: #4c5cdb14;
+
+  --custom-select-dropdown-hover-text-color: #4c5cdbff;
+  --custom-select-dropdown-hover-bg-color: #1827430a;
+
+  --custom-select-dropdown-disabled-text-color: #181f434d;
+  --custom-select-dropdown-disabled-bg-color: transparent;
+  /* datepicker */
+  --custom-datepicker-bg: #1827430a;
+  --custom-datepicker-svg-color: #818a9e;
+  --custom-datepicker-hover-bg: #ffffffff;
+  --custom-datepicker-placeholder-color: #181f434d;
+  --custom-datepicker-text-color: #181f43ff;
+  --custom-datepicker-separator-text-color: #181f43bf;
+  --custom-datepicker-hover-border-color: #4c5cdbcc;
+  --custom-datepicker-shadow: #4c5cdb1f;
+  --custom-datepicker-border-radius: 3px;
+
+  --custom-timepicker-bg: #ffffffff;
+  --custom-timepicker-text-color: #181f43ff;
+  --custom-timepicker-active-bg: #4c5cdb14;
+  --custom-timepicker-active-text-color: #4c5cdbff;
+  --custom-timepicker-hover-bg: #1827430a;
+  --custom-timepicker-hover-text-color: #181f43ff;
+  /* datepicker-dropdown */
+  --custom-datepicker-dropdown-bg-color: #ffffffff;
+  --custom-datepicker-dropdown-range-bg: #4c5cdb1f;
+  --custom-datepicker-dropdown-text-color: #181f43ff;
+  --custom-datepicker-dropdown-hover-text-color: #4c5cdbff;
+  --custom-datepicker-dropdown-inner-border-color: #181f4314;
+  --custom-datepicker-dropdown-boxshadow: 0px 6px 24px 0px rgba(24, 31, 67, 0.12);
+  // --custom-datepicker-dropdown-desc-text-color: ;
+  --custom-datepicker-dropdown-hover-bg-color: #1827430a;
+  // --custom-datepicker-dropdown-selected-text-color: ;
+  --custom-datepicker-dropdown-selected-bg-color: #4c5cdbff;
+  // --custom-datepicker-dropdown-disabled-text-color: ;
+  // --custom-datepicker-dropdown-disabled-bg-color: ;
+
+  /* 导航菜单 */
+  // --custom-nav-menu-popup-bg: unset;
+  // --custom-nav-menu-item-color: unset;
+  // --custom-nav-menu-inline-submenu-bg: unset;
+  // --custom-nav-menu-highlight-color: unset;
+  // --custom-nav-menu-highlight-danger-color: unset;
+  // --custom-nav-menu-item-active-bg: linear-gradient(90deg; #e3ffe7 0%; #d9e7ff 100%);
+  // --custom-nav-menu-item-active-danger-bg: unset;
+  // --custom-nav-menu-item-group-title-color: unset;
+
+  // --custom-nav-menu-shadow: unset;
+  // --custom-nav-menu-item-shadow: unset;
+  // --custom-nav-menu-item-disabled-color: #00000040;
+  // --custom-nav-menu-border-color: #181F431F;
+
+  --custom-menu-bg-color: #f6f7f8ff;
+  --custom-menu-text-color: #181f43ff;
+  --custom-menu-icon-color: #5e6576ff;
+  --custom-menu-group-color: #181f43ff;
+
+  --custom-menu-hover-text-color: #4c5cdbcc;
+  --custom-menu-hover-icon-color: #4c5cdbff;
+  --custom-menu-hover-bg-color: #1827430a;
+
+  --custom-menu-active-text-color: #4c5cdbcc;
+  --custom-menu-active-border-color: #4c5cdbff;
+  --custom-menu-active-icon-color: #4c5cdbff;
+  --custom-menu-active-bg-color: #ffffff;
+
+  --custom-menu-disabled-text-color: #b9bbc6ff;
+  --custom-menu-disabled-bg-color: #f6f7f8ff;
+  --custom-menu-disabled-icon-color: #b9bbc6ff;
+
+  --custom-menu-dropdown-text-color: #181f43ff;
+  --custom-menu-dropdown-group-text-color: #181f4380;
+  --custom-menu-dropdown-bg-color: #f6f7f8ff;
+  --custom-menu-dropdown-hover-text-color: #4c5cdbff;
+  --custom-menu-dropdown-hover-bg-color: #f6f7f8ff;
+
+  --custom-menu-dropdown-active-text-color: #4c5cdbff;
+  --custom-menu-dropdown-active-bg-color: #1827430a;
+
+  --custom-menu-dropdown-disabled-text-color: ;
+  --custom-menu-dropdown-disabled-bg-color: ;
+
+  --custom-menu-dropdown-border-radius: 3px;
+  --custom-menu-item-border-radius: 3px;
+  --custom-menu-padding-left: ;
+  --custom-menu-title-padding-left: ;
+  --custom-menu-padding-right: ;
+  --custom-menu-title-padding-right: ;
+  --custom-menu-item-padding-top-bottom: ;
+  /* 间隔空间背景 */
+  --custom-divider-space-background: unset;
+  --custom-divider-space-shadow: unset;
+
+  /* 空状态背景图片 */
+  --custom-empty-image: unset;
+  --custom-emtpy-shadow: unset;
+
+  /* 结果反馈页背景 */
+  --custom-result-feedback-background: unset;
+  --custom-result-feedback-shadow: unset;
+
+  /* 结果反馈页图片 */
+  --custom-result-feedback-icon: unset;
+  --custom-result-feedback-icon-shadow: unset;
+
+  /* 按钮 */
+  --custom-btn-font-weight: 400;
+  --custom-btn-font-size: 14px;
+  --custom-btn-border-radius: 3px;
+  --custom-btn-border-width: 1px;
+
+  --custom-btn-default-color: #181f43ff;
+  --custom-btn-default-bg-color: #1827430a;
+  --custom-btn-default-bg-color-hover: #181f4314;
+  --custom-btn-default-color-hover: #181f43bf;
+  --custom-btn-default-disabled-bg: #1827430a;
+  --custom-btn-default-disabled-color: #181f434d;
+
+  --custom-btn-default-ghost-bg: #ffffff;
+  --custom-btn-default-ghost-color: #181f43ff;
+  --custom-btn-default-ghost-border-color: #181f431f;
+  --custom-btn-default-ghost-border-color-hover: #181f434d;
+  --custom-btn-default-ghost-focus-boxshadow: #1827430a;
+  --custom-btn-default-ghost-bg-color-disabled: #ffffffff;
+  --custom-btn-default-ghost-color-disabled: #181f434d;
+  --custom-btn-default-ghost-border-color-disabled: #181f434d;
+
+  --custom-btn-focus-shadowbox: #4c5cdb1f;
+  --custom-btn-primary-shadow: unset;
+  --custom-btn-text-shadow: unset;
+
+  --custom-btn-primary-bg-color: #4c5cdbff;
+  --custom-btn-primary-bg-color-hover: #4c5cdbcc;
+  --custom-btn-primary-color: #ffffffff;
+  --custom-btn-primary-bg-color-disabled: #4c5cdb80;
+  --custom-btn-primary-color-disabled: #ffffffff;
+  --custom-btn-primary-ghost-color: #4c5cdbff;
+  --custom-btn-primary-ghost-border-color: #4c5cdbcc;
+  --custom-btn-primary-ghost-color-hover: #4c5cdbcc;
+  --custom-btn-primary-ghost-border-color-hover: #4c5cdb80;
+
+  --custom-btn-primary-ghost-color-disabled: #4c5cdb80;
+  --custom-btn-primary-ghost-border-color-disabled: #4c5cdb80;
+
+  --custom-btn-primary-error-color: #ffffffff;
+  --custom-btn-primary-error-bg-color: #ff5568ff;
+  --custom-btn-primary-error-border-color: #ff55684d;
+
+  --custom-btn-disable-color: #ffffff7f;
+
+  --custom-btn-text-color: #181f43ff;
+  --custom-btn-text-color-hover: #4c5cdbcc;
+  --custom-btn-text-color-disabled: #181f434d;
+
+  --custom-btn-link-color: #4c5cdbff;
+  --custom-btn-link-color-hover: #4c5cdbcc;
+  --custom-btn-link-color-disabled: #4c5cdb80;
+
+  /* 面包屑 */
+  --custom-breadcrumb-base-color: unset;
+  --custom-breadcrumb-last-item-color: unset;
+  --custom-breadcrumb-link-color: unset;
+  --custom-breadcrumb-link-color-hover: unset;
+  --custom-breadcrumb-separator-color: unset;
+
+  /* 卡片 */
+  --custom-app-card-bg: #18274308;
+  --custom-app-card-hover-bg: #ffffff;
+  --custom-card-background: linear-gradient(90deg; #e3ffe7 0%; #d9e7ff 100%);
+  --custom-card-hover-background: linear-gradient(270deg; #ffdee9 0%; #b5fffc 100%);
+  /* 表格 */
+  --custom-table-bg-color: #ffffffff;
+  --custom-table-text-color: #181f43bf;
+  --custom-table-header-bg-color: #ffffffff;
+  --custom-table-header-text-color: #000000d8;
+  --custom-table-header-sort-bg: unset;
+
+  --custom-table-body-sort-bg: unset;
+  --custom-table-body-bg: unset;
+  --custom-table-body-selected-sort-bg: unset;
+
+  --custom-table-row-hover-bg-color: #4c5cdb0f;
+  --custom-table-selected-row-color: unset;
+  --custom-table-selected-row-bg: unset;
+  --custom-table-selected-row-hover-bg: #4c5cdb0f;
+  --custom-table-expanded-row-bg: unset;
+  --custom-table-border-color: #181f431f;
+  --custom-table-footer-bg: unset;
+  --custom-table-footer-color: unset;
+  --custom-table-header-cell-split-color: unset;
+
+  /* 分页 */
+  --custom-pagination-bg: #ffffffff;
+  --custom-pagination-color: #181f43bf;
+  --custom-pagination-item-bg-active: #4c5cdb14;
+  --custom-pagination-item-disabled-color: #181f434d;
+
+  /* >>> Radio 单选框 */
+  --custom-radio-color: #181f43d9;
+  --custom-radio-bg-color: #ffffffff;
+  --custom-radio-border-color: #181f431f;
+  --custom-radio-hover-border-color: #4c5cdbff;
+  --custom-radio-check-color: #4c5cdbff;
+  --custom-radio-disabled-border-color: #181f431f;
+  --custom-radio-disabled-bg-color: #181f4314;
+  --custom-radio-disabled-text-color: #181f434d;
+  --custom-radio-disabled-check-color: #4c5cdb80;
+  --custom-radio-checked-disabled-border-color: #ffffffff;
+  --custom-radio-group-checked-color: #4c5cdbff;
+  --custom-radio-group-checked-bg: #4c5cdb14;
+  --custom-radio-group-checked-border-color: #e3e4e8ff;
+
+  // checkbox
+  --custom-checkbox-text-color: #181f43bf;
+  --custom-checkbox-bg-color: #ffffffff;
+  --custom-checkbox-border-color: #181f431f;
+  --custom-checkbox-checked-color: #4c5cdbff;
+  --custom-checkbox-checked-inner-color: #ffffff;
+  --custom-checkbox-checked-border-color: #4c5cdbff;
+
+  --custom-checkbox-disabled-checked-color: #4c5cdb80;
+  --custom-checkbox-disabled-border-color: #181f431f;
+  --custom-checkbox-disabled-bg-color: #181f4314;
+  --custom-checkbox-border-radius: 2px;
+  /* >>> Tree 树组件 */
+  --custom-tree-bg: #ffffffff;
+  --custom-tree-text-color: #181f43bf;
+  --custom-tree-checkbox-bg: #ffffffff;
+  --custom-tree-checkbox-border-color: #181f431f;
+  --custom-tree-checkbox-checked-bg: #4c5cdbff;
+  --custom-tree-checkbox-checked-border-color: #4c5cdbff;
+  --custom-tree-node-text-color: #4c5cdbff;
+  --custom-tree-node-section-bg: #1827430a;
+  --custom-tree-node-hover-bg: #1827430a;
+
+  // popover
+  --custom-popover-dropdown-option-hover-color: #1827430a;
+  --custom-popover-dropdown-text-normal-color: #181f43ff;
+  --custom-popover-border-radius: 2px;
+  --custom-popover-text-color: #181f43bf;
+  --custom-popover-text-title-color: #181f43ff;
+  --custom-popover-bg-color: #ffffffff;
+  --custom-popover-inner-border-color: #181f4314;
+  --custom-popover-boxshadow: 0px 6px 24px 0px #181f431a;
+  // toolTip
+  --custom-tooltip-bg-color: #181f43d9;
+  --custom-tooltip-text-color: #ffffffff;
+  --custom-tooltip-border-radius: 2px;
+  --custom-tooltip-boxshadow: none;
+  // form
+  --custom-form-item-label-text-color: #181f43ff;
+  --custom-form-field-name-text-color: #181f43bf;
+  --custom-form-field-name-border-color: #181f4314;
+  --custom-form-title-color: #000000d9;
+  --custom-form-symbol-color: #181f437f;
+  --custom-form-font-size-error: 12px;
+  --custom-form-box-shadow-error: 0 0 0 2px rgb(255, 77, 79, 0.2);
+  // tag
+  // --custom-tag-warning-border-color: #FF99004D;
+  // --custom-tag-warning-text-color: #FF9900FF;
+  // --custom-tag-success-border-color: #06C4984D;
+  // --custom-tag-success-text-color: #06C498FF;
+  // --custom-tag-error-border-color: #FF55684D;
+  // --custom-tag-error-text-color: #FF5568FF;
+  --custom-tag-primary-border-color: #4c5cdb4d;
+  // --custom-tag-primary-text-color: #4C5CDBFF;
+  // --custom-tag-revoke-border-color: #181F431F;
+  // --custom-tag-revoke-text-color: #181F4380;
+
+  --custom-tag-font-size: 12px;
+  --custom-tag-text-color: #000000d9;
+  --custom-tag-bg-color: #1827430a;
+  --custom-tag-border-color: #181f431f;
+  --custom-tag-icon-color: #ffffff;
+  --custom-tag-hover-text-color: #000000d9;
+  --custom-tag-hover-bg-color: #1827430a;
+  --custom-tag-hover-border-color: #181f431f;
+  --custom-tag-hover-icon-color: #ffffff;
+  --custom-tag-disabled-text-color: ;
+  --custom-tag-disabled-bg-color: ;
+  --custom-tag-disabled-border-color: ;
+  --custom-tag-disabled-icon-color: ;
+  --custom-tag-border-radius: 2px;
+
+  // spin
+  --custom-spin-text-size: 14px;
+  --custom-spin-text-color: #5d6cdeff;
+  --custom-spin-dot-color: #5d6cdeff;
+  --custom-spin-bg-color: rgba(255, 255, 255, 0.5);
+  // Progress
+  --custom-progress-bar-color-normal: #4c5cdbff;
+  --custom-progress-bar-color-success: #24b493ff;
+  --custom-progress-bar-color-exception: #ff5568ff;
+  --custom-progress-outside-text-color: #000000d9;
+
+  --custom-progress-bg-color: #1827430a;
+  --custom-progress-border-radius: 100px;
+  --custom-progress-text-font-size: 1em;
+  --custom-progress-inside-text-color: "";
+  // message
+  --custom-message-boxshadow: none;
+  --custom-message-info-border-color: #e9ebfaff;
+  --custom-message-info-bg-color: #e9ebfaff;
+  --custom-message-info-icon-color: #4c5cdbff;
+  --custom-message-info-text-color: #3546c8ff;
+  --custom-message-success-border-color: #e1f8f2ff;
+  --custom-message-success-bg-color: #e1f8f2ff;
+  --custom-message-success-icon-color: #24b493ff;
+  --custom-message-success-text-color: #039f7bff;
+  --custom-message-warning-border-color: #fff2e0ff;
+  --custom-message-warning-bg-color: #fff2e0ff;
+  --custom-message-warning-icon-color: #ff9900ff;
+  --custom-message-warning-text-color: #f67a00ff;
+  --custom-message-error-border-color: #ffeaecff;
+  --custom-message-error-bg-color: #ffeaecff;
+  --custom-message-error-icon-color: #ff5568ff;
+  --custom-message-error-text-color: #eb2e43ff;
+  --custom-message-loading-border-color: #e9ebfaff;
+  --custom-message-loading-bg-color: #e9ebfaff;
+  --custom-message-loading-icon-color: #4c5cdbff;
+  --custom-message-loading-text-color: #3546c8ff;
+  --custom-message-border-radius: 3px;
+  // Empty
+  --custom-empty-text-color: #000000d9;
+  // drawer
+  --custom-drawer-boxshadow: none;
+  --custom-drawer-mask-bg-color: #181f43bf;
+  --custom-drawer-header-bg-color: #ffffffff;
+  --custom-drawer-title-text-color: #181f43d9;
+  --custom-drawer-body-bg-color: #ffffffff;
+  --custom-drawer-content-text-color: #181f43d9;
+  --custom-drawer-footer-bg: #1827430a;
+  --custom-drawer-footer-text-color: #181f43d9;
+  --custom-drawer-close-color: #181f43d9;
+  --custom-drawer-close-hover-color: #181f43d9;
+  --custom-drawer-inner-border-color: #181f4314;
+  // cascader
+  --custom-cascader-color: #181f43ff;
+  --custom-cascader-border-color: #181f4314;
+  --custom-cascader-svg-color: #818a9e;
+  --custom-cascader-bg: #1827430a;
+  --custom-cascader-hover-bg: #ffffffff;
+  --custom-cascader-placeholder-color: #181f434d;
+  --custom-cascader-hover-border-color: #4c5cdbcc;
+  --custom-cascader-shadow: #4c5cdb1f;
+  --custom-cascader-multiple-border-color: #181f431f;
+  --custom-cascader-dropdown-bg: #ffffffff;
+  --custom-cascader-dropdown-option-hover-bg: #1827430a;
+  --custom-cascader-dropdown-option-active-bg: #4c5cdb14;
+  --custom-cascader-dropdown-color: #181f43ff;
+  --custom-cascader-dropdown-option-active-color: #4c5cdbff;
+  --custom-cascader-dropdown-option-disabled-color: #00000040;
+  // Upload
+  --custom-upload-list-text-color: #000000d9;
+  --custom-upload-list-hover-bg: #f5f5f5;
+  // tabs
+  --custom-tabs-text-color: #000000d9;
+  --custom-tabs-font-size: 14px;
+  --custom-tabs-line-color: rgba(0, 0, 0, 0.06);
+  --custom-tabs-hover-text-color: #4c5cdbcc;
+  --custom-tabs-hover-border-color: transparent;
+  --custom-tabs-disabled-text-color: #181f434d;
+  --custom-tabs-disabled-border-color: transparent;
+  --custom-tabs-active-text-color: #3546c8ff;
+  --custom-tabs-active-border-color: #3546c8ff;
+
+  --custom-tabs-card-border-color: #181f4314;
+  --custom-tabs-card-bg-color: #1827430a;
+  --custom-tabs-card-close-color: #5e6576ff;
+  --custom-tabs-card-hover-close-color: #4c5cdbcc;
+  --custom-tabs-card-border-radius: 2px;
+
+  /* --- 项目自定义 --- */
+  --custom-body-bg-img: ;
+  --custom-header-logo-text-color: #4c5cdbff;
+  --custom-header-logo-bg-color: transparent;
+  --custom-header-logo-width: 240px;
+
+  --custom-header-height: 56px;
+  --custom-header-font-weight: 600;
+
+  --custom-task-details-header-bg-color: ;
+  --custom-task-details-header-height: 160px;
+  --custom-task-details-header-text-color: #181f43ff;
+  --custom-task-details-header-enabled-text-color: #433118ff;
+  --custom-task-details-header-task-count-text-color: #181f43ff;
+  --custom-task-details-header-enabled-count-text-color: #433118ff;
+  --custom-task-details-content-padding: 10px 54px 24px;
+  --custom-task-details-content-item-font-size: 14px;
+  --custom-task-details-content-item-space: 12px;
+
+  --custom-task-details-content-card-row-gap: 30px;
+  --custom-task-details-content-card-column-gap: 30px;
+  --custom-task-details-content-card-border-radius: 8px;
+  --custom-task-details-content-card-boxShadow: 0 3px 10px rgba(24, 31, 67, 0.3);
+  --custom-task-details-content-card-hover-boxShadow: 0px 3px 10px rgba(76, 92, 219, 0.54);
+  --custom-task-details-content-card-width: 270px;
+  --custom-task-details-content-card-height: 151px;
+  --custom-task-details-content-body-padding: 10px;
+
+  --custom-card-bg: linear-gradient(90deg, rgba(24, 31, 67, 0.08) 0%, rgba(24, 31, 67, 0.12) 100%);
+  --custom-rule-header-bg: linear-gradient(-90deg, #ced3f4, #d8dbf6 122px, rgba(76, 92, 219, 0.08));
+  --custom-card-padding: 12px;
+  --custom-card-title-margin: 0;
+
+  --custom-card-title-font-size: 16px;
+  --custom-card-title-text-color: #333333ff;
+  --custom-card-title-font-weight: 600;
+
+  --custom-card-date-font-size: 12px;
+  --custom-card-date-text-color: #333333ff;
+  --custom-card-date-font-weight: 600;
+
+  --custom-card-user-font-size: 12px;
+  --custom-card-user-text-color: #333333ff;
+  --custom-card-user-font-weight: 600;
+
+  --custom-card-key-font-size: 14px;
+  --custom-card-key-text-color: #333333ff;
+  --custom-card-key-font-weight: 100;
+  --custom-card-key-width: 160px;
+
+  --custom-card-status-btn-left: unset;
+  --custom-card-status-btn-top: unset;
+  --custom-card-status-btn-right: 32px;
+  --custom-card-status-btn-bottom: 46px;
+
+  --custom-progress-status-bg: #24b493ff;
+  --custom-source-box-hover-operation-bg: #8b8fa1ff;
+  --custom-source-box-hover-operation-svg-color: #fff;
+
+  // 发起流程
+  --custom-start-flow-border-top-color: #06c498ff;
+  --custom-start-flow-log-bg: #ffffffff;
+  --custom-start-flow-status-processing-bg: #4c5cdb14;
+  --custom-start-flow-status-revert-bg: #ff990014;
+  --custom-start-flow-status-undo-bg: #1827430a;
+  --custom-start-flow-status-terminated-bg: #ff556814;
+  --custom-start-flow-status-finish-bg: #06c49814;
+  --custom-start-flow-shadow-color: #181f4314;
+  --custom-start-flow-banner-linear-bg: linear-gradient(319deg, #5a69e0 0%, #7389f8 100%);
+
+  //  流程详情
+  --custom-flow-detail-status-doing-bg: #4c5cdb1f;
+  --custom-flow-detail-status-doing-text-color: #3546c8ff;
+  --custom-flow-detail-status-stop-bg: #ff55681f;
+  --custom-flow-detail-status-stop-text-color: #eb2e43ff;
+  --custom-flow-detail-status-reject-bg: #ff99001f;
+  --custom-flow-detail-status-reject-text-color: #f67a00ff;
+  --custom-flow-detail-status-done-bg: #06c4981f;
+  --custom-flow-detail-status-done-text-color: #03a882ff;
+  --custom-flow-detail-status-recall-bg: #ededf0ff;
+  --custom-flow-detail-status-recall-text-color: #181f4380;
+
+  // tag
+  --custom-tag-warning-border-color: #ff99004d;
+  --custom-tag-warning-text-color: #ff9900ff;
+  --custom-tag-success-border-color: #06c4984d;
+  --custom-tag-success-text-color: #06c498ff;
+  --custom-tag-error-border-color: #ff55684d;
+  --custom-tag-error-text-color: #ff5568ff;
+  --custom-tag-primary-border-color: #4c5cdb4d;
+  --custom-tag-primary-text-color: #4c5cdbff;
+  --custom-tag-revoke-border-color: #181f431f;
+  --custom-tag-revoke-text-color: #181f4380;
+}

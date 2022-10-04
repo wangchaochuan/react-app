@@ -1,0 +1,2360 @@
+// 覆盖antd样式
+$border-style-base: var(--custom-border-style-base, solid);
+$font-weight-base: var(--custom-font-weight-base, 600);
+$branch-nodes-background-color: var(--custom-branch-background, #f6f7f8);
+$branch-content-background-color: var(--custom-branch-content-background, #fff);
+
+$theme-color: var(--theme-color, rgba(76, 92, 219, 1));
+// primary
+$primary-color: var(--custom-primary-color, rgba(76, 92, 219, 1));
+$primary-color-hover: var(--custom-primary-color-hover, rgba(76, 92, 219, 0.8));
+$primary-color-active: var(--custom-primary-color-active, rgba(53, 70, 200, 1));
+$primary-color-disabled: var(--custom-primary-color-disabled, rgba(76, 92, 219, 0.5));
+$primary-color-lighter: var(--custom-primary-color-lighter, #4c5cdb1f);
+// Info
+// $info-color: var(--custom-info-color, #5dbacc);
+// $info-color-hover: var(--custom-info-color-hover, #57a4cc);
+// $info-color-active: var(--custom-info-color-active, #57a4cc);
+// $info-color-disabled: var(--custom-info-color-disabled, #57a4cc);
+// Success
+$success-color: var(--custom-success-color, rgba(36, 180, 147, 1));
+$success-color-hover: var(--custom-success-color-hover, rgba(36, 180, 147, 0.8));
+$success-color-active: var(--custom-success-color-active, rgba(3, 159, 123, 1));
+$success-color-disabled: var(--custom-success-color-disabled, rgba(36, 180, 147, 0.5));
+// Warning
+$warning-color: var(--custom-warning-color, #ff9900);
+$warning-color-hover: var(--custom-warning-color-hover, rgba(255, 153, 0, 0.8));
+$warning-color-active: var(--custom-warning-color-active, #f67a00);
+$warning-color-disabled: var(--custom-warning-color-disabled, rgba(255, 153, 0, 0.5));
+// Error
+$error-color: var(--custom-error-color, rgba(255, 85, 104, 1));
+$error-color-hover: var(--custom-error-color-hover, rgba(255, 85, 104, 0.8));
+$error-color-active: var(--custom-error-color-active, rgba(235, 46, 67, 1));
+$error-color-disabled: var(--custom-error-color-disabled, rgba(255, 85, 104, 0.5));
+
+/* >>> Common */
+/*  滚动条颜色 */
+$scroll-bar-color: var(--custom-scroll-bar-color, #181f434d);
+/*  滚动条大小 */
+$scroll-bar-size: var(--custom-scroll-bar-size, 5px);
+/* 页面背景 */
+$body-background: var(--custom-body-background, #ffffff);
+/* 基础字体颜色 */
+$text-color-base: var(--custom-text-color-base, #181f43ff);
+/* 基础字体hover颜色 */
+$text-color-base-hover: var(--custom-text-color-base-hover, #181f43ff);
+/* 标题字体颜色 */
+$text-color-title: var(--custom-text-color-title, #1c1e29ff);
+/* 标题字体hover颜色 */
+$text-color-title-hover: var(--custom-text-color-title-hover, #1c1e29ff);
+/* 次标题字体颜色 */
+$text-color-subtitle: var(--custom-text-color-subtitle, #181f43ff);
+/* 次标题字体hover颜色 */
+$text-color-subtitle-hover: var(--custom-text-color-subtitle-hover, #181f43ff);
+/* 提示字体颜色 */
+$text-color-tip: var(--custom-text-color-tip, #181f43bf);
+/* 提示字体hover颜色 */
+$text-color-tip-hover: var(--custom-text-color-tip-hover, #181f43bf);
+/* 禁用字体颜色 */
+$text-color-disabled: var(--custom-text-color-disabled, #181f434d);
+/* 禁用字体hover颜色 */
+$text-color-disabled-hover: var(--custom-text-color-disabled-hover, #181f434d);
+/* 说明字体颜色 */
+$text-color-caption: var(--custom-text-color-caption, #181f4380);
+/* 禁用字体颜色 */
+$text-color-icon: var(--custom-text-color-icon, #5e6576ff);
+/* 禁用字体hover颜色 */
+$text-color-icon-hover: var(--custom-text-color-icon-hover, #5e6576ff);
+/* placeholder字体颜色 */
+$text-color-placeholder: var(--custom-text-color-placeholder, #181f434d);
+/* Link链接字体颜色 */
+$text-color-link-base: var(--custom-text-color-link-base, #4c5cdbff);
+/* Link链接字体hover颜色 */
+$text-color-link-hover: var(--custom-text-color-link-hover, #4c5cdbcc);
+/* Link链接字体disabled颜色 */
+$text-color-link-disabled: var(--custom-text-color-link-disabled, #4c5cdb80);
+/* 基础字体 */
+$font-family-base: var(
+  --custom-font-family-base,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  "Helvetica Neue",
+  Arial,
+  "Noto Sans",
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji"
+);
+/* 标题字体 */
+$font-family-title: var(--custom-font-family-title);
+/* 数字字体 */
+$font-family-title: var(--custom-font-family-number);
+/* 英文字体 */
+$font-family-letter: var(--custom-font-family-letter);
+/* 基础字体大小 */
+$font-size-base: var(--custom-font-size-base, 14px);
+/* 标题字体大小 */
+$font-size-title: var(--custom-font-size-title, 16px);
+/* 次标题字体大小 */
+$font-size-subtitle: var(--custom-font-size-subtitle, 14px);
+/* 图标字体大小 */
+$font-size-icon: var(--custom-font-size-icon, 16px);
+/* 基础行高 */
+$line-height-base: var(--custom-line-height-base, 1.5717);
+/* 标题行高 */
+$line-height-title: var(--custom-line-height-title, 1.5717);
+/* 次标题行高 */
+$line-height-subtitle: var(--custom-line-height-subtitle, 1.5717);
+/* 一级标题 */
+$heading-1-size: var(--custom-heading-1-size, 28px);
+/* 二级标题 */
+$heading-2-size: var(--custom-heading-2-size, 26px);
+/* 三级标题 */
+$heading-3-size: var(--custom-heading-3-size, 20px);
+/* 四级标题 */
+$heading-4-size: var(--custom-heading-4-size, 16px);
+/* 五级标题 */
+$heading-5-size: var(--custom-heading-5-size, 14px);
+/* 基础边框圆角 */
+$border-radius-base: var(--custom-border-radius-base, 0px);
+/* 小圆角 */
+$border-radius-small: var(--custom-border-radius-small, 4px);
+/* 迷你圆角 */
+$border-radius-mini: var(--custom-border-radius-mini, 2px);
+/* 基础边框颜色 */
+$border-color-base: var(--custom-border-color-base, #181f4314);
+/* hover边框颜色 */
+$border-color-hover: var(--custom-border-color-hover, #4c5cdb80);
+/* 提示边框颜色 */
+$border-color-tip: var(--custom-border-color-tip, #181f43d9);
+/* 暗示字体颜色 */
+$text-color-hint: var(--custom-text-color-hint, #181f43d9);
+/* disabled边框颜色 */
+$border-color-disabled: var(--custom-border-color-disabled, #181f431f);
+/* 基础边框宽度 */
+$border-width-base: var(--custom-border-width-base, 1px);
+/* 中等边框宽度 */
+$border-width-medium: var(--custom-border-width-medium, 2px);
+/* 粗边框宽度 */
+$border-width-bold: var(--custom-border-width-bold, 3px);
+/* divider颜色 */
+$divider-color-base: var(--custom-divider-color-base, #181f431f);
+/* 基础背景颜色 */
+$background-color-base: var(--custom-background-color-base, #ffffff);
+/* hover背景颜色 */
+$background-color-hover: var(--custom-background-color-hover, #ffffff);
+/* 提示背景颜色 */
+$background-color-tip: var(--custom-background-color-tip, #ffffff);
+/* 禁用背景颜色 */
+$background-color-disabled: var(--custom-background-color-disabled);
+/* 基础阴影样式 */
+$box-shadow-base: var(--custom-box-shadow-base, #4c5cdb1f);
+/* hover阴影样式 */
+$box-shadow-hover: var(--custom-box-shadow-hover, "0px 0px 0px 2px rgba(89, 239, 202, 0.2)");
+/* 提示阴影样式 */
+$box-shadow-tip: var(--custom-box-shadow-tip, "0px 2px 12px #000");
+/* 禁用阴影样式 */
+$box-shadow-disabled: var(--custom-box-shadow-disabled, "0px 2px 12px #000");
+$drawer-background-color: var(--custom-drawer-background-color, #ffffff);
+
+$custom-color-lightest: var(--custom-primary-color-lightest, #4c5cdb14);
+
+/* >>> Layout 布局 */
+$layout-header-color: var(--custom-layout-header-color, #181f43d9);
+$layout-header-bg: var(--custom-layout-header-bg, #ffffffff);
+$layout-header-box-shadow: var(--custom-layout-header-shadow, #181f4314);
+$layout-side-bg: var(--custom-layout-side-bg, #1827430a);
+$layout-side-menu-bg: var(--custom-layout-side-menu-bg, #ffffff);
+$layout-content-bg: var(--custom-layout-content-bg, #ffffffff);
+$layout-editor-side-bg: var(--custom-layout-editor-side-bg, #1827430a);
+$layout-editor-side-active-bg: var(--custom-layout-editor-side-active-bg, #18274305);
+.ant-layout-sider {
+  background: $layout-side-bg;
+}
+
+/* >>> Modal 弹框 */
+$modal-mask-bg: var(--custom-modal-mask-bg-color, #181f438c);
+$modal-header-text-color: var(--custom-modal-title-text-color, #181f438c);
+$modal-body-bg: var(--custom-modal-content-bg-color, #fff);
+$modal-body-text-color: var(--custom-modal-content-text-color, #181f438c);
+$modal-close-color: var(--custom-modal-close-color, #181f438c);
+$modal-close-hover-color: var(--custom-modal-close-hover-color, #181f438c);
+$modal-border-color: var(--custom-modal-inner-border-color, #181f4314);
+$modal-out-border-color: var(--custom-modal-out-border-color, transparent);
+$modal-border-radius: var(--custom-modal-border-radius, 2px);
+$modal-boxshadow: var(--custom-modal-boxshadow);
+$modal-background-color: var(--custom-modal-background-color, #ffffff);
+.ant-modal-mask {
+  background-color: $modal-mask-bg;
+}
+.ant-modal-wrap {
+  .ant-modal-content {
+    border: 1px solid $modal-out-border-color;
+    border-radius: $modal-border-radius;
+    box-shadow: $modal-boxshadow;
+    background-color: $modal-body-bg;
+  }
+  .ant-modal-header {
+    background-color: $modal-body-bg;
+    color: $modal-header-text-color;
+    border-bottom-color: $modal-border-color;
+    .ant-modal-title {
+      color: $modal-header-text-color;
+    }
+  }
+  .ant-modal-close {
+    color: $modal-close-color;
+    &:hover {
+      color: $modal-close-hover-color;
+    }
+  }
+  .ant-modal-body {
+    //background: $modal-body-bg;
+    color: $modal-body-text-color;
+  }
+  .ant-modal-footer {
+    background: $modal-body-bg;
+    border-top-color: $modal-border-color;
+  }
+  .ant-modal-confirm-body .ant-modal-confirm-title,
+  .ant-modal-confirm-body .ant-modal-confirm-content {
+    color: $modal-body-text-color;
+  }
+}
+/* >>> Form 表单 */
+$form-field-name-text-color: var(--custom-form-field-name-text-color, #181f43ff);
+$form-item-label-text-color: var(--custom-form-item-label-text-color, #181f43bf);
+$form-title-color: var(--custom-form-title-color, #000000d9);
+$form-field-name-border-color: var(--custom-form-field-name-border-color, #181f4314);
+$form-symbol-color: var(--custom-form-symbol-color, #181f437f);
+$form-font-size-error: var(--custom-form-font-size-error, 12px);
+$form-box-shadow-error: var(--custom-form-box-shadow-error, "0 0 0 2px rgb(255,77,79,0.2)");
+.ant-form {
+  color: $form-field-name-text-color;
+  .ant-form-item {
+    color: $form-field-name-text-color;
+  }
+}
+.ant-form-item-label > label {
+  color: $form-field-name-text-color;
+  .ant-form-item-tooltip {
+    color: $form-symbol-color;
+  }
+}
+.ant-form-item-explain,
+.ant-form-item-extra {
+  color: $form-item-label-text-color;
+}
+.ant-form-item-explain-error {
+  font-size: $form-font-size-error;
+}
+.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover,
+.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper-focused {
+  box-shadow: $form-box-shadow-error;
+}
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:focus,
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover,
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input-focused {
+  box-shadow: $form-box-shadow-error;
+}
+/* >>> Menu 导航菜单 */
+$menu-bg-color: var(--custom-menu-bg-color, #1827430a);
+$menu-text-color: var(--custom-menu-text-color, #181f43ff);
+$menu-icon-color: var(--custom-menu-icon-color, #5e6576ff);
+$menu-group-color: var(--custom-menu-group-color, #181f43ff);
+$menu-border-color: var(--custom-border-color-base, #181f4314);
+
+$menu-disabled-text-color: var(--custom-menu-disabled-text-color, #181f434d);
+$menu-disabled-bg-color: var(--custom-menu-disabled-bg-color, transparent);
+
+$menu-active-bg-color: var(--custom-menu-active-bg-color, #ffffff);
+$menu-active-text-color: var(--custom-menu-active-text-color, #4c5cdbcc);
+$menu-active-icon-color: var(--custom-menu-active-icon-color, #4c5cdbff);
+$menu-active-border-color: var(--custom-menu-active-border-color, #4c5cdbff);
+
+$menu-hover-bg-color: var(--custom-menu-hover-bg-color, #1827430a);
+$menu-hover-text-color: var(--custom-menu-hover-text-color, #4c5cdbcc);
+$menu-hover-icon-color: var(--custom-menu-hover-icon-color, #4c5cdbff);
+
+$menu-dropdown-bg-color: var(--custom-menu-dropdown-bg-color, #f6f7f8ff);
+
+.ant-menu {
+  background: $menu-bg-color;
+  color: $menu-text-color;
+  border-bottom-color: $menu-border-color;
+  .ant-menu-sub .ant-menu-item:hover {
+    background-color: $menu-hover-bg-color;
+  }
+  .ant-menu-item a {
+    color: $menu-text-color;
+    border-bottom-color: $menu-border-color;
+    .ant-menu-sub .ant-menu-item:hover,
+    .ant-menu-item:active,
+    .ant-menu-submenu-title:active {
+      background-color: $menu-hover-bg-color;
+    }
+    .ant-menu-item a {
+      color: $menu-text-color;
+    }
+    .ant-menu-item-group-title {
+      color: $menu-group-color;
+    }
+    .ant-menu-sub.ant-menu-inline {
+      background: $menu-bg-color;
+    }
+  }
+  .ant-menu-item.ant-menu-item-selected,
+  .ant-menu-submenu-selected {
+    color: $menu-active-text-color;
+    svg {
+      color: $menu-active-icon-color;
+    }
+    .ant-menu-item-icon {
+      color: $menu-active-icon-color;
+    }
+  }
+  .ant-menu-item-disabled,
+  .ant-menu-submenu-disabled {
+    color: $menu-disabled-text-color !important;
+    background-color: $menu-disabled-bg-color;
+    svg {
+      color: $menu-disabled-text-color;
+    }
+    &:hover {
+      background-color: $menu-disabled-bg-color;
+      color: $menu-disabled-text-color;
+      svg {
+        color: $menu-disabled-text-color;
+      }
+    }
+  }
+}
+
+.ant-menu-inline,
+.ant-menu-vertical,
+.ant-menu-vertical-left {
+  border-right: $border-width-base $border-style-base $border-color-base;
+}
+.ant-menu-submenu-selected,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+  color: $menu-active-text-color;
+}
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover {
+  color: $menu-hover-text-color;
+}
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
+  border-bottom-color: $menu-active-border-color;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background: $menu-active-bg-color;
+}
+.ant-menu-submenu-popup > .ant-menu {
+  background: $menu-dropdown-bg-color;
+}
+.ant-menu-vertical .ant-menu-item::after,
+.ant-menu-vertical-left .ant-menu-item::after,
+.ant-menu-vertical-right .ant-menu-item::after,
+.ant-menu-inline .ant-menu-item::after {
+  border-right-color: $menu-active-border-color;
+}
+.ant-menu-light .ant-menu-item:hover,
+.ant-menu-light .ant-menu-item-active,
+.ant-menu-light .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-light .ant-menu-submenu-active,
+.ant-menu-light .ant-menu-submenu-title:hover {
+  color: $primary-color;
+}
+/* >>> Tooltip 提示 */
+$toolTip-dropdown-bg: var(--custom-tooltip-bg-color, #181f43d9);
+$toolTip-dropdown-text-color: var(--custom-tooltip-text-color, #ffffffff);
+$tooltip-border-radius: var(--custom-tooltip-border-radius, 2px);
+$tooltip-boxshadow: var(--custom-tooltip-boxshadow, none);
+.ant-tooltip {
+  .ant-tooltip-inner {
+    background-color: $toolTip-dropdown-bg;
+    color: $toolTip-dropdown-text-color;
+    border-radius: $tooltip-border-radius;
+    box-shadow: $tooltip-boxshadow;
+  }
+  .ant-tooltip-arrow-content::before {
+    background: $toolTip-dropdown-bg;
+  }
+}
+/* >>> Drawer 抽屉 */
+$drawer-mask-bg: var(--custom-drawer-mask-bg-color, #181f438c);
+$drawer-header-bg: var(--custom-drawer-header-bg-color, #fff);
+$drawer-header-text-color: var(--custom-drawer-title-text-color, #181f438c);
+$drawer-body-bg: var(--custom-drawer-body-bg-color, #fff);
+$drawer-footer-bg: var(--custom-drawer-footer-bg, #fff);
+$drawer-body-text-color: var(--custom-drawer-content-text-color, #181f438c);
+$drawer-footer-text-color: var(--custom-drawer-footer-text-color, #181f438c);
+$drawer-close-color: var(--custom-drawer-close-color, #181f438c);
+$drawer-close-hover-color: var(--custom-drawer-close-hover-color, #181f438c);
+$drawer-border-color: var(--custom-drawer-inner-border-color, #181f4314);
+$drawer-boxshadow: var(--custom-drawer-boxshadow, none);
+
+.ant-drawer-mask {
+  background-color: $drawer-mask-bg;
+}
+.ant-drawer-content-wrapper {
+  .ant-drawer-content {
+    box-shadow: $drawer-boxshadow;
+  }
+  .ant-drawer-header {
+    background: $drawer-header-bg;
+    color: $drawer-header-text-color;
+    border-bottom-color: $drawer-border-color;
+    .ant-drawer-title {
+      color: $drawer-header-text-color;
+    }
+  }
+  .ant-drawer-close {
+    color: $drawer-close-color;
+    &:hover {
+      color: $drawer-close-hover-color;
+    }
+  }
+  .ant-drawer-body {
+    background: $drawer-body-bg;
+    color: $drawer-body-text-color;
+  }
+  .ant-drawer-footer {
+    background: $drawer-footer-bg;
+    color: $drawer-footer-text-color;
+    border-top-color: $drawer-border-color;
+  }
+}
+/* >>> Cascader 级联菜单*/
+$cascader-border-radius: var(--custom-cascader-border-radius-base, 3px);
+$cascader-box-shadow: var(--custom-cascader-shadow, #4c5cdb1f);
+$cascader-disabled-background-size: var(--custom-cascader-disabled-background-size, 10px);
+
+$cascader-color: var(--custom-cascader-color, #181f43ff);
+$cascader-border-color: var(--custom-cascader-border-color, #181f4314);
+$cascader-svg-color: var(--custom-cascader-svg-color, #818a9e);
+$cascader-bg: var(--custom-cascader-bg, #1827430a);
+$cascader-dropdown-bg: var(--custom-cascader-dropdown-bg, #ffffffff);
+$cascader-dropdown-color: var(--custom-cascader-dropdown-color, #181f43ff);
+$cascader-dropdown-option-active-color: var(--custom-cascader-dropdown-option-active-color, #4c5cdbff);
+$cascader-dropdown-option-active-bg: var(--custom-cascader-dropdown-option-active-bg, #4c5cdb14);
+$cascader-dropdown-option-hover-bg: var(--custom-cascader-dropdown-option-hover-bg, #1827430a);
+$cascader-dropdown-option-disabled-color: var(--custom-cascader-dropdown-option-disabled-color, #4c5cdbcc);
+$cascader-placeholder-color: var(--custom-cascader-placeholder-color, #181f434d);
+$cascader-hover-bg: var(--custom-cascader-hover-bg, #ffffffff);
+$cascader-hover-border-color: var(--custom-cascader-hover-border-color, #4c5cdbcc);
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: $cascader-hover-border-color;
+}
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-color: $cascader-hover-border-color;
+}
+.ant-select-dropdown {
+  background-color: $cascader-bg;
+  color: $cascader-color;
+  .ant-cascader-menu-item:hover {
+    background-color: $cascader-dropdown-option-hover-bg;
+  }
+  .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled),
+  .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):hover {
+    background-color: $cascader-dropdown-option-active-bg;
+    color: $cascader-dropdown-option-active-color;
+  }
+  .ant-cascader-menu-item-expand .ant-cascader-menu-item-expand-icon,
+  .ant-cascader-menu-item-loading-icon {
+    color: $cascader-svg-color;
+  }
+  .ant-cascader-menu-item-disabled,
+  .ant-cascader-menu-item-disabled:hover {
+    background-color: $cascader-dropdown-bg;
+    color: $cascader-dropdown-option-disabled-color;
+  }
+  .ant-cascader-menu {
+    border-color: $cascader-border-color;
+  }
+}
+/* >>> Empty 空组件 */
+$message-text-color: var(--custom-empty-text-color, #000000d9);
+.ant-empty-description {
+  color: $message-text-color;
+}
+/* >>> Message 提示语 */
+$message-boxshadow: var(--custom-message-boxshadow, none);
+$message-border-radius: var(--custom-message-border-radius, 3px);
+$message-info-border-color: var(--custom-message-info-border-color, #e9ebfaff);
+$message-info-bg-color: var(--custom-message-info-bg-color, #e9ebfaff);
+$message-info-icon-color: var(--custom-message-info-icon-color, #4c5cdbff);
+$message-info-text-color: var(--custom-message-info-text-color, #3546c8ff);
+
+$message-success-border-color: var(--custom-message-success-border-color, #e1f8f2ff);
+$message-success-bg-color: var(--custom-message-success-bg-color, #e1f8f2ff);
+$message-success-icon-color: var(--custom-message-success-icon-color, #24b493ff);
+$message-success-text-color: var(--custom-message-success-text-color, #039f7bff);
+
+$message-warning-border-color: var(--custom-message-warning-border-color, #fff2e0ff);
+$message-warning-bg-color: var(--custom-message-warning-bg-color, #fff2e0ff);
+$message-warning-icon-color: var(--custom-message-warning-icon-color, #ff9900ff);
+$message-warning-text-color: var(--custom-message-warning-text-color, #f67a00ff);
+
+$message-error-border-color: var(--custom-message-error-border-color, #ffeaecff);
+$message-error-bg-color: var(--custom-message-error-bg-color, #ffeaecff);
+$message-error-icon-color: var(--custom-message-error-icon-color, #ff5568ff);
+$message-error-text-color: var(--custom-message-error-text-color, #eb2e43ff);
+
+$message-loading-border-color: var(--custom-message-loading-border-color, #e9ebfaff);
+$message-loading-bg-color: var(--custom-message-loading-bg-color, #e9ebfaff);
+$message-loading-icon-color: var(--custom-message-loading-icon-color, #4c5cdbff);
+$message-loading-text-color: var(--custom-message-loading-text-color, #3546c8ff);
+
+.ant-message {
+  z-index: 1008;
+}
+.ant-message-notice-content {
+  padding: 0;
+  box-shadow: $message-boxshadow;
+  background-color: transparent;
+  .ant-message-custom-content {
+    padding: 10px 16px;
+    border-radius: $message-border-radius;
+  }
+  .ant-message-info {
+    background-color: $message-info-bg-color;
+    border: 1px solid $message-info-border-color;
+    color: $message-info-text-color;
+    .anticon {
+      color: $message-info-icon-color;
+    }
+  }
+  .ant-message-success {
+    background-color: $message-success-bg-color;
+    border: 1px solid $message-success-border-color;
+    color: $message-success-text-color;
+    .anticon {
+      color: $message-success-icon-color;
+    }
+  }
+  .ant-message-warning {
+    background-color: $message-warning-bg-color;
+    border: 1px solid $message-warning-border-color;
+    color: $message-warning-text-color;
+    .anticon {
+      color: $message-warning-icon-color;
+    }
+  }
+  .ant-message-error {
+    background-color: $message-error-bg-color;
+    border: 1px solid $message-error-border-color;
+    color: $message-error-text-color;
+    .anticon {
+      color: $message-error-icon-color;
+    }
+  }
+  .ant-message-loading {
+    background-color: $message-loading-bg-color;
+    border: 1px solid $message-loading-border-color;
+    color: $message-loading-text-color;
+    .anticon {
+      color: $message-loading-icon-color;
+    }
+  }
+}
+/* >>> Popover 气泡 */
+$popover-dropdown-text-normal-color: var(--custom-popover-dropdown-text-normal-color, #181f43ff);
+$popover-dropdown-option-hover-color: var(--custom-popover-dropdown-option-hover-color, #1827430a);
+
+$popover-border-radius: var(--custom-popover-border-radius, 2px);
+$popover-text-color: var(--custom-popover-text-color, #181f43bf);
+$popover-text-title-color: var(--custom-popover-text-title-color, #181f43ff);
+$popover-bg-color: var(--custom-popover-bg-color, #ffffffff);
+$popover-inner-border-color: var(--custom-popover-inner-border-color, #181f4314);
+$popover-boxshadow: var(--custom-popover-boxshadow, "0px 6px 24px 0px #181F431A");
+
+.ant-popover {
+  color: $popover-text-color;
+  &-inner,
+  &-arrow-content {
+    background-color: $popover-bg-color;
+  }
+  &-arrow-content:before {
+    background: $popover-bg-color;
+  }
+  &-inner {
+    box-shadow: $popover-boxshadow;
+  }
+  &-inner-content,
+  &-title {
+    color: $popover-text-color;
+    border-color: $popover-inner-border-color;
+  }
+  &-popover-message {
+    color: $popover-text-title-color;
+  }
+}
+
+/* >>> Tabs 标签页 */
+$tabs-text-color: var(--custom-tabs-text-color, #000000d9);
+$tabs-font-size: var(--custom-tabs-font-size, 14px);
+$tabs-border-color: var(--custom-tabs-line-color, rgba(0, 0, 0, 0.06));
+
+$tabs-active-text-color: var(--custom-tabs-active-text-color, #3546c8ff);
+$tabs-active-border-color: var(--custom-tabs-active-border-color, #3546c8ff);
+$tabs-hover-text-color: var(--custom-tabs-hover-text-color, #4c5cdbcc);
+$tabs-hover-border-color: var(--custom-tabs-hover-border-color, transparent);
+$tabs-disabled-text-color: var(--custom-tabs-disabled-text-color, #181f434d);
+$tabs-disabled-border-color: var(--custom-tabs-disabled-border-color, transparent);
+
+$tabs-card-bg-color: var(--custom-tabs-card-bg-color);
+$tabs-card-border-color: var(--custom-tabs-card-border-color);
+$tabs-card-close-color: var(--custom-tabs-card-close-color);
+$tabs-card-hover-close-color: var(--custom-tabs-card-hover-close-color);
+.ant-tabs {
+  color: $tabs-text-color;
+  font-size: $tabs-font-size;
+  .ant-tabs-top > .ant-tabs-nav:before,
+  .ant-tabs-bottom > .ant-tabs-nav:before,
+  .ant-tabs-top > div > .ant-tabs-nav:before,
+  .ant-tabs-bottom > div > .ant-tabs-nav:before {
+    border-color: $tabs-border-color;
+  }
+  .ant-tabs-tab:hover {
+    color: $tabs-hover-text-color;
+  }
+  &-tab.ant-tabs-tab-disabled {
+    color: $tabs-disabled-text-color;
+    &:hover {
+      color: $tabs-disabled-text-color;
+    }
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: $tabs-active-text-color;
+  }
+  .ant-tabs-ink-bar {
+    background-color: $tabs-active-border-color;
+  }
+  &-top > .ant-tabs-nav::before,
+  &-bottom > .ant-tabs-nav::before,
+  &-top > div > .ant-tabs-nav::before,
+  &-bottom > div > .ant-tabs-nav::before {
+    border-color: $tabs-border-color;
+  }
+  &-tab:hover {
+    color: $tabs-hover-text-color;
+  }
+  &-tab-remove {
+    color: $tabs-card-close-color;
+  }
+  &-tab-remove:hover {
+    color: $tabs-card-hover-close-color;
+  }
+}
+.ant-tabs-tab.ant-tabs-tab-disabled .ant-tabs-tab-btn:focus,
+.ant-tabs-tab.ant-tabs-tab-disabled .ant-tabs-tab-remove:focus,
+.ant-tabs-tab.ant-tabs-tab-disabled .ant-tabs-tab-btn:active,
+.ant-tabs-tab.ant-tabs-tab-disabled .ant-tabs-tab-remove:active {
+  color: $tabs-disabled-text-color;
+}
+.ant-tabs-tab-btn:focus,
+.ant-tabs-tab-remove:focus,
+.ant-tabs-tab-btn:active,
+.ant-tabs-tab-remove:active {
+  color: $tabs-active-text-color;
+}
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab {
+  background-color: $tabs-card-bg-color;
+  border-color: $tabs-card-border-color;
+}
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab-active {
+  background-color: transparent;
+}
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab-active {
+  border-bottom-color: $body-background;
+}
+/* >>> Tag 标签 */
+$tag-font-size: var(--custom-tag-font-size, 12px);
+$tag-bg: var(--custom-tag-bg-color, #1827430a);
+$tag-text-color: var(--custom-tag-text-color, #000000d9);
+$tag-border-color: var(--custom-tag-border-color, #181f431f);
+$tag-icon-color: var(--custom-tag-icon-color, #ffffff);
+
+$tag-hover-bg-color: var(--custom-tag-hover-bg-color, #1827430a);
+$tag-hover-text-color: var(--custom-tag-hover-text-color, #000000d9);
+$tag-hover-border-color: var(--custom-tag-hover-border-color, #181f431f);
+$tag-hover-icon-color: var(--custom-tag-hover-icon-color, #ffffff);
+
+$tag-disabled-bg-color: var(--custom-tag-disabled-bg-color);
+$tag-disabled-text-color: var(--custom-tag-disabled-text-color);
+$tag-disabled-border-color: var(--custom-tag-disabled-border-color);
+$tag-disabled-icon-color: var(--custom-tag-disabled-icon-color);
+
+$tag-border-radius: var(--custom-tag-border-radius, 2px);
+
+.ant-tag,
+.ant-tag a,
+.ant-tag a:hover,
+.ant-tag-close-icon {
+  color: $tag-text-color;
+}
+.ant-tag {
+  background-color: $tag-bg;
+  font-size: $tag-font-size;
+  border-color: $tag-border-color;
+  border-radius: $tag-border-radius;
+  .anticon {
+    svg {
+      color: $tag-icon-color;
+    }
+  }
+  .ant-tag-close-icon {
+    color: $tag-text-color;
+    svg {
+      color: $tag-text-color;
+    }
+  }
+  &:hover {
+    background-color: $tag-hover-bg-color;
+    border-color: $tag-hover-border-color;
+    color: $tag-hover-text-color;
+    a,
+    a:hover {
+      color: $tag-hover-text-color;
+    }
+    .anticon {
+      svg {
+        color: $tag-hover-icon-color;
+      }
+    }
+    .ant-tag-close-icon {
+      color: $tag-hover-text-color;
+      svg {
+        color: $tag-hover-text-color;
+      }
+    }
+  }
+  .ant-tag-close-icon:hover {
+    color: $tag-hover-text-color;
+    svg {
+      color: $tag-hover-text-color;
+    }
+  }
+}
+/* >>> Upload 上传 */
+$upload-list-text-color: var(--custom-upload-list-text-color);
+$upload-list-hover-bg: var(--custom-upload-list-hover-bg);
+.ant-upload {
+  color: $text-color-base;
+}
+.ant-upload-list {
+  color: $upload-list-text-color;
+}
+.ant-upload-list-item:hover .ant-upload-list-item-info {
+  background-color: $upload-list-hover-bg;
+}
+/* >>> Progress 进度条 */
+$progress-bg-normal: var(--custom-progress-bar-color-normal, #177ddc);
+$progress-bg-success: var(--custom-progress-bar-color-success, #52c41a);
+$progress-bg-exception: var(---custom-progress-bar-color-exception, #ff4d4f);
+$progress-text-color: var(--custom-progress-outside-text-color, #000000d9);
+
+$progress-bg-color: var(--custom-progress-bg-color, #1827430a);
+$progress-border-radius: var(--custom-progress-border-radius, 100px);
+$progress-text-font-size: var(--custom-progress-text-font-size, 1em);
+$progress-inside-text-color: var(--custom-progress-inside-text-color, "");
+
+.ant-progress-inner {
+  background-color: $progress-bg-color;
+  border-radius: $progress-border-radius;
+}
+.ant-progress-bg {
+  background-color: $progress-bg-normal;
+}
+.ant-progress-text,
+.ant-progress-circle .ant-progress-text {
+  color: $progress-text-color;
+  font-size: $progress-text-font-size;
+}
+.ant-progress-status-success .ant-progress-bg {
+  background-color: $progress-bg-success;
+}
+.ant-progress-status-exception .ant-progress-bg {
+  background-color: $progress-bg-exception;
+}
+/* >>> Spin 加载中 */
+$spin-text-size: var(--custom-spin-text-size, 14px);
+$spin-text-color: var(--custom-spin-text-color, #5d6cdeff);
+$spin-dot-color: var(--custom-spin-dot-color, #5d6cdeff);
+$spin-bg-color: var(--custom-spin-bg-color, rgba(255, 255, 255, 0.5));
+.ant-spin {
+  color: $spin-text-color;
+  .ant-spin-dot-item {
+    background-color: $spin-dot-color;
+  }
+  .ant-spin-spinning {
+    background-color: transparent;
+  }
+}
+.ant-spin-nested-loading > div > .ant-spin .ant-spin-text {
+  color: $spin-text-color;
+  text-shadow: none;
+}
+.ant-spin-container {
+  transition: all 0.3s;
+  &:after {
+    opacity: 1;
+    background-color: transparent;
+  }
+}
+.ant-spin-blur {
+  background-color: $spin-bg-color;
+  &:after {
+    opacity: 1;
+    background-color: $spin-bg-color;
+  }
+}
+/* >>> Radio 单选框 */
+$radio-color: var(--custom-radio-color, #181f43d9);
+$radio-bg: var(--custom-radio-bg-color, #ffffffff);
+$radio-border-color: var(--custom-radio-border-color, #181f431f);
+$radio-hover-border-color: var(--custom-radio-hover-border-color, #4c5cdbff);
+$radio-checked-bg: var(--custom-radio-check-color, #4c5cdbff);
+$radio-disabled-border-color: var(--custom-radio-disabled-border-color, #181f431f);
+$radio-disabled-bg: var(--custom-radio-disabled-bg-color, #181f4314);
+$radio-disabled-text-color: var(--custom-radio-disabled-text-color, #181f434d);
+
+$radio-checked-disabled-bg: var(--custom-radio-disabled-check-color, #4c5cdb80);
+$radio-checked-disabled-border-color: var(--custom-radio-checked-disabled-border-color, #ffffffff);
+$radio-group-checked-color: var(--custom-radio-group-checked-color, #4c5cdbff);
+$radio-group-checked-bg: var(--custom-radio-group-checked-bg, #4c5cdb14);
+$radio-group-checked-border-color: var(--custom-radio-group-checked-border-color, #e3e4e8ff);
+
+.ant-radio {
+  color: $radio-color;
+
+  &-group {
+    color: $radio-color;
+
+    .ant-radio-button-wrapper {
+      span {
+        color: $radio-color;
+      }
+
+      &.ant-radio-button-wrapper-checked {
+        background-color: $radio-group-checked-bg;
+        border-color: $radio-group-checked-border-color;
+        span {
+          color: $radio-group-checked-color !important;
+        }
+      }
+      &.ant-radio-button-wrapper-disabled {
+        span {
+          color: $radio-disabled-text-color;
+        }
+      }
+    }
+
+    .ant-radio-wrapper {
+      margin-bottom: 12px;
+      color: $radio-color;
+    }
+  }
+
+  &-wrapper {
+    color: $radio-color;
+    &:hover .ant-radio {
+      border-color: $radio-hover-border-color;
+    }
+  }
+
+  .ant-radio-input:focus + .ant-radio-inner {
+    box-shadow: none;
+    border-color: $radio-hover-border-color;
+  }
+
+  &:hover {
+    .ant-radio-inner {
+      border-color: $radio-hover-border-color;
+    }
+  }
+
+  &-inner {
+    background-color: $radio-bg;
+    border-color: $radio-border-color;
+  }
+
+  &.ant-radio-checked {
+    .ant-radio-inner {
+      border-color: $radio-hover-border-color;
+
+      &::after {
+        background-color: $radio-checked-bg;
+      }
+    }
+  }
+
+  &.ant-radio-disabled {
+    &.ant-radio-checked {
+      .ant-radio-inner {
+        background-color: $radio-checked-disabled-bg;
+        border-color: $radio-checked-disabled-bg !important;
+
+        &::after {
+          background-color: $radio-checked-disabled-border-color !important;
+        }
+      }
+    }
+
+    .ant-radio-inner {
+      border-color: $radio-disabled-border-color !important;
+      background-color: $radio-disabled-bg;
+    }
+
+    & + span {
+      color: $radio-disabled-text-color;
+    }
+  }
+}
+
+/* >>> Checkbox 多选框 */
+$checkbox-text-color: var(--custom-checkbox-text-color, #181f43bf);
+$checkbox-bg: var(--custom-checkbox-bg-color, #ffffffff);
+$checkbox-border-color: var(--custom-checkbox-border-color, #181f431f);
+$checkbox-checked-bg: var(--custom-checkbox-checked-color, #4c5cdbff);
+$checkbox-checked-inner-color: var(--custom-checkbox-checked-inner-color, #ffffff);
+$checkbox-checked-border-color: var(--custom-checkbox-checked-border-color, #4c5cdbff);
+
+$checkbox-disabled-border-color: var(--custom-checkbox-disabled-border-color, #181f431f);
+$checkbox-disabled-bg: var(--custom-checkbox-disabled-bg-color, #181f4314);
+$checkbox-checked-disabled-bg: var(--custom-checkbox-disabled-checked-color, #4c5cdb80);
+$checkbox-border-radius: var(--custom-checkbox-border-radius, 2px);
+
+.ant-checkbox {
+  &:hover .ant-checkbox-inner {
+    border-color: $checkbox-checked-border-color;
+  }
+
+  &-wrapper {
+    color: $checkbox-text-color;
+
+    &:hover .ant-checkbox-inner {
+      border-color: $checkbox-checked-border-color;
+    }
+    .ant-checkbox-inner {
+      background-color: $checkbox-bg;
+      border-color: $checkbox-border-color;
+      border-radius: $checkbox-border-radius;
+    }
+  }
+
+  &-indeterminate {
+    .ant-checkbox-inner {
+      background-color: $checkbox-bg;
+      border-color: $checkbox-border-color;
+
+      &::after {
+        background-color: $checkbox-checked-bg;
+      }
+    }
+  }
+
+  &-group {
+    .ant-checkbox-wrapper {
+      margin-bottom: 12px;
+      color: $checkbox-text-color;
+    }
+  }
+
+  &-checked {
+    &::after {
+      border-color: $checkbox-checked-border-color;
+    }
+    .ant-checkbox-inner {
+      background-color: $checkbox-checked-bg;
+      border-color: $checkbox-checked-border-color;
+      &::after {
+        border-color: $checkbox-checked-inner-color !important;
+      }
+    }
+  }
+
+  &.ant-checkbox-disabled {
+    &.ant-checkbox-checked {
+      .ant-checkbox-inner {
+        background-color: $checkbox-checked-disabled-bg;
+        border-color: $checkbox-checked-disabled-bg !important;
+
+        &::after {
+          border-color: $checkbox-checked-inner-color !important;
+        }
+      }
+    }
+
+    .ant-checkbox-inner {
+      border-color: $checkbox-disabled-border-color !important;
+      background-color: $checkbox-disabled-bg;
+    }
+
+    & + span {
+      color: $checkbox-text-color;
+    }
+  }
+
+  &-input:focus + .ant-checkbox-inner {
+    border-color: $checkbox-checked-bg;
+  }
+}
+
+/* >>> Switch 开关 */
+$switch-bg: var(--custom-switch-bg-color, #181f434d);
+$switch-checked-bg: var(--custom-switch-on-bg-color, #4c5cdb);
+$switch-height-base: var(--custom-switch-height-base, 24px);
+$switch-handle-width: var(--custom-switch-handle-width, 20px);
+$switch-handle-height: var(--custom-switch-handle-height, 20px);
+
+$switch-text-color: var(--custom-switch-text-color, #ffffff);
+$switch-on-text-color: var(--custom-switch-on-text-color, #ffffff);
+$switch-circle-color: var(--custom-switch-circle-color, #ffffff);
+$switch-on-circle-color: var(--custom-switch-on-circle-color, #ffffff);
+.ant-switch {
+  height: $switch-height-base;
+  line-height: $switch-height-base;
+  background-color: $switch-bg;
+  .ant-switch-inner {
+    color: $switch-text-color;
+  }
+  &-handle {
+    width: $switch-handle-width;
+    height: $switch-handle-height;
+    &:before {
+      background-color: $switch-circle-color;
+    }
+  }
+  &-checked {
+    background-color: $switch-checked-bg;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    .ant-switch-handle {
+      left: calc(100% - 20px - 2px);
+      &:before {
+        background-color: $switch-on-circle-color;
+      }
+    }
+    .ant-switch-inner {
+      color: $switch-on-text-color;
+    }
+  }
+}
+
+/* >>> Input 输入框  */
+$input-border-radius: var(--custom-input-border-radius, 3px);
+$input-box-shadow: var(--custom-input-focus-boxshadow, #4c5cdb1f);
+$input-bg: var(--custom-input-bg-color, #1827430a);
+$input-color: var(--custom-input-text-color, #181f43ff);
+$input-placeholder-color: var(--custom-input-placeholder-color, #181f434d);
+$input-hover-border-color: var(--custom-input-hover-border-color, #4c5cdbcc);
+$input-textarea-count-color: var(--custom-input-textarea-count-color, #181f434d);
+$input-background-hover-color: var(--custom-input-background-hover-color, #ffffff);
+
+$input-disabled-border-color: var(--custom-input-disabled-border-color, #ffffff0f);
+$input-disabled-bg-color: var(
+  --custom-input-disabled-bg-color,
+  linear-gradient(
+    -45deg,
+    #edeff1ff 0,
+    #edeff1ff 10%,
+    transparent 10%,
+    transparent 50%,
+    #edeff1ff 50%,
+    #edeff1ff 60%,
+    transparent 60%,
+    transparent
+  )
+);
+$input-disabled-text-color: var(--custom-input-disabled-text-color, #181f43ff);
+$input-icon-color: var(--custom-input-icon-color, #b1b1b2ff);
+.ant-input {
+  color: $input-color;
+  background-color: $input-bg;
+  border-radius: $input-border-radius;
+  border-color: transparent;
+  &-prefix,
+  &-suffix {
+    .anticon {
+      color: $input-icon-color;
+    }
+  }
+  &:hover,
+  &:focus {
+    border-color: $input-hover-border-color;
+    background-color: $input-background-hover-color;
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px $input-box-shadow;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $input-placeholder-color;
+  }
+
+  &.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless),
+  &.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless):hover {
+    background-color: $input-background-hover-color;
+  }
+
+  &-lg {
+    padding: 8px 12px;
+    font-size: $font-size-base;
+  }
+
+  &[disabled] {
+    color: $input-disabled-text-color;
+    background: $input-disabled-bg-color;
+    background-size: 10px 10px;
+    border-color: $input-disabled-border-color;
+    box-shadow: none;
+    background-color: $input-bg;
+
+    &:hover {
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  &-affix-wrapper {
+    background-color: $input-bg;
+    border-color: transparent;
+    border-radius: $input-border-radius;
+
+    &:not(&-disabled):hover {
+      background-color: $input-background-hover-color;
+      border-color: $input-hover-border-color;
+    }
+
+    .ant-input {
+      background-color: transparent;
+    }
+  }
+
+  &-affix-wrapper-focused {
+    border-color: $input-hover-border-color;
+    background-color: $input-background-hover-color;
+    box-shadow: 0 0 0 3px $input-box-shadow;
+  }
+
+  &-textarea-show-count {
+    color: $input-textarea-count-color;
+  }
+}
+.ant-input-affix-wrapper {
+  .ant-input {
+    box-shadow: none;
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+.ant-input-textarea-show-count::after {
+  color: $input-textarea-count-color;
+}
+.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper,
+.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover {
+  background-color: $input-background-hover-color;
+}
+/* >>> Input-number 数字输入框  */
+$input-number-control-border-color: var(--custom-input-number-control-border-color, #181f431f);
+$input-number-control-hover-border-color: var(--custom-input-number-control-hover-border-color, #181f434d);
+$input-number-control-color: var(--custom-input-number-control-color);
+$input-number-control-disabled-color: var(--custom-input-number-control-disabled-color);
+$input-number-control-hover-color: var(--custom-input-number-control-hover-color);
+.ant-input-number {
+  color: $input-color;
+  background: $input-bg;
+  border-radius: $input-border-radius;
+  border-color: transparent;
+  &:hover,
+  &:focus {
+    border-color: $input-hover-border-color;
+    background: $input-background-hover-color;
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px $input-box-shadow;
+  }
+
+  &-focused {
+    box-shadow: 0 0 0 3px $input-box-shadow;
+  }
+
+  input::-webkit-input-placeholder {
+    color: $input-placeholder-color;
+  }
+
+  &-lg {
+    font-size: $font-size-base;
+  }
+
+  &[disabled] {
+    background: $input-disabled-bg-color;
+    background-size: 10px 10px;
+    border-color: $input-disabled-border-color;
+    color: $input-disabled-text-color;
+    box-shadow: none;
+    &:hover {
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+  &-handler {
+    &-wrap {
+      background: transparent;
+    }
+    border-color: $input-number-control-border-color;
+    color: $input-number-control-color;
+
+    &:hover {
+      border-color: $input-number-control-hover-border-color;
+      .ant-input-number-handler-up-inner,
+      .ant-input-number-handler-down-inner {
+        color: $primary-color;
+      }
+    }
+
+    &:active {
+      background-color: transparent;
+      border-color: $input-number-control-hover-border-color;
+      box-shadow: 0px 0px 0px 4px $input-box-shadow;
+    }
+  }
+  &-handler-down-disabled {
+    color: $input-number-control-disabled-color;
+    &:hover {
+      color: $input-number-control-disabled-color;
+    }
+  }
+  .ant-input-number-handler-up-inner,
+  .ant-input-number-handler-down-inner {
+    color: $input-number-control-color;
+  }
+}
+.ant-input-number.ant-input-number-disabled {
+  background: $input-disabled-bg-color;
+  background-size: 10px 10px;
+  border-color: $input-disabled-border-color;
+  color: $input-disabled-text-color;
+  box-shadow: none;
+  background-color: $input-bg;
+}
+.ant-input-number-status-error:not(.ant-input-number-disabled):not(.ant-input-number-borderless).ant-input-number,
+.ant-input-number-status-warning:not(.ant-input-number-disabled):not(.ant-input-number-borderless).ant-input-number {
+  background: $input-background-hover-color;
+  &:hover,
+  &:focus {
+    background: transparent;
+    box-shadow: 0 0 0 2px #ff4d4f33;
+  }
+}
+.ant-input-number-status-warning:not(.ant-input-number-disabled):not(.ant-input-number-borderless).ant-input-number,
+.ant-input-number-status-warning:not(.ant-input-number-disabled):not(.ant-input-number-borderless).ant-input-number {
+  background: $input-background-hover-color;
+  &:hover,
+  &:focus {
+    background: transparent;
+    box-shadow: 0 0 0 2px #faad1433;
+  }
+}
+
+/* >>> Buttons 按钮  */
+$btn-font-weight: var(--custom-btn-font-weight, 400);
+$btn-font-size: var(--custom-btn-font-size, 14px);
+$btn-border-radius: var(--custom-btn-border-radius-base, 3px);
+$btn-box-shadow: var(--custom-btn-focus-shadowbox, #4c5cdb1f);
+$btn-default-color: var(--custom-btn-default-color, #181f43ff);
+$btn-default-bg: var(--custom-btn-default-bg-color, #1827430a);
+$btn-default-hover-bg: var(--custom-btn-default-bg-color-hover, #181f4314);
+$btn-default-hover-color: var(--custom-btn-default-color-hover, #181f43bf);
+$btn-default-disabled-bg: var(--custom-btn-default-disabled-bg, #1827430a);
+$btn-default-disabled-color: var(--custom-btn-default-disabled-color, #181f434d);
+
+$btn-default-ghost-color: var(--custom-btn-default-ghost-color, #181f43ff);
+$btn-default-ghost-bg: var(--custom-btn-default-ghost-bg, #ffffff);
+$btn-default-ghost-border-color: var(--custom-btn-default-ghost-border-color, #181f431f);
+$btn-default-ghost-hover-border-color: var(--custom-btn-default-ghost-border-color-hover, #181f434d);
+$btn-default-ghost-shadow-active-color: var(--custom-btn-default-ghost-focus-boxshadow, #1827430a);
+$btn-default-ghost-disabled-bg: var(--custom-btn-default-ghost-bg-color-disabled, #ffffffff);
+$btn-default-ghost-disabled-color: var(--custom-btn-default-ghost-color-disabled, #181f434d);
+$btn-default-ghost-disabled-border-color: var(--custom-btn-default-ghost-border-color-disabled, #181f434d);
+
+$btn-primary-color: var(--custom-btn-primary-color, #ffffffff);
+$btn-primary-bg: var(--custom-btn-primary-bg-color, #4c5cdbff);
+$btn-primary-border-color: var(--custom-btn-primary-bg-color, #4c5cdbff);
+$btn-primary-hover-bg: var(--custom-btn-primary-bg-color-hover, #4c5cdbcc);
+$btn-primary-disabled-bg: var(--custom-btn-primary-bg-color-disabled, #4c5cdb80);
+$btn-primary-disabled-color: var(--custom-btn-primary-color-disabled, #ffffffff);
+
+$btn-primary-ghost-color: var(--custom-btn-primary-ghost-color, #4c5cdbff);
+$btn-primary-ghost-border-color: var(--custom-btn-primary-ghost-border-color, #4c5cdbcc);
+$btn-primary-ghost-hover-color: var(--custom-btn-primary-ghost-color-hover, #4c5cdbcc);
+$btn-primary-ghost-hover-border-color: var(--custom-btn-primary-ghost-border-color-hover, #4c5cdb80);
+$btn-primary-ghost-disabled-color: var(--custom-btn-primary-ghost-color-disabled, #4c5cdb80);
+$btn-primary-ghost-disabled-border-color: var(--custom-btn-primary-ghost-border-color-disabled, #4c5cdb80);
+
+$btn-primary-danger-color: var(--custom-btn-primary-error-color, #ffffffff);
+$btn-primary-danger-bg: var(--custom-btn-primary-error-bg-color, #ff5568ff);
+$btn-primary-danger-border-color: var(--custom-btn-primary-error-border-color, #ff55684d);
+
+$btn-text-color: var(--custom-btn-text-color, #181f43ff);
+$btn-text-color-hover: var(--custom-btn-text-color-hover, #4c5cdbcc);
+$btn-text-color-disabled: var(--custom-btn-text-color-disabled, #181f434d);
+
+$btn-link-color: var(--custom-btn-link-color, #181f43ff);
+$btn-link-color-hover: var(--custom-btn-link-color-hover, #4c5cdbcc);
+$btn-link-color-disabled: var(--custom-btn-link-color-disabled, #181f434d);
+
+.ant-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $btn-border-radius;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  background-color: $btn-default-bg;
+  color: $btn-default-color;
+  border-color: transparent;
+
+  svg {
+    color: inherit;
+    margin-right: 4px;
+    // margin-top: -2px;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  &:hover,
+  &.active,
+  &:focus {
+    color: $btn-default-hover-color;
+    border-color: transparent;
+    background-color: $btn-default-hover-bg;
+
+    svg {
+      color: $btn-default-hover-color;
+    }
+  }
+
+  &.ant-btn-background-ghost {
+    background-color: $btn-default-ghost-bg;
+    border-color: $btn-default-ghost-border-color;
+    color: $btn-default-ghost-color;
+    &:hover,
+    &:focus {
+      border-color: $btn-default-ghost-hover-border-color;
+      color: $btn-default-ghost-color;
+      svg {
+        color: $btn-default-ghost-color;
+      }
+    }
+
+    &:active {
+      box-shadow: 0 0 0 4px $btn-default-ghost-shadow-active-color;
+    }
+
+    &[disabled] {
+      background-color: $btn-default-ghost-disabled-bg;
+      color: $btn-default-ghost-disabled-color;
+      border-color: $btn-default-ghost-disabled-border-color;
+
+      &:hover,
+      &:focus {
+        background-color: $btn-default-ghost-disabled-bg;
+        border-color: $btn-default-ghost-disabled-border-color;
+        color: $btn-default-ghost-disabled-color;
+        svg {
+          color: $btn-default-ghost-disabled-color;
+        }
+      }
+    }
+    &.ant-btn-primary[disabled] {
+      border-color: $btn-primary-ghost-disabled-border-color;
+      color: $btn-primary-ghost-disabled-color;
+    }
+  }
+
+  &[disabled] {
+    background-color: $btn-default-disabled-bg;
+    color: $btn-default-disabled-color;
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: $btn-default-disabled-bg;
+      border-color: transparent;
+      color: $btn-default-disabled-color;
+      svg {
+        color: $btn-default-disabled-color;
+      }
+    }
+    &.ant-btn-text {
+      background-color: transparent;
+      color: $btn-text-color-disabled;
+      &:hover {
+        color: $btn-text-color-disabled;
+        background-color: transparent;
+        svg {
+          color: $btn-text-color-disabled;
+        }
+      }
+    }
+    &.ant-btn-link {
+      background-color: transparent;
+      color: $btn-link-color-disabled;
+      &:hover {
+        color: $btn-link-color-disabled;
+        background-color: transparent;
+        svg {
+          color: $btn-link-color-disabled;
+        }
+      }
+    }
+  }
+
+  &-primary {
+    color: $btn-primary-color;
+    background-color: $btn-primary-bg;
+    border-color: $btn-primary-border-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $btn-primary-color;
+      background-color: $btn-primary-hover-bg;
+      border-color: $btn-primary-hover-bg;
+      svg {
+        color: $btn-primary-color;
+      }
+    }
+
+    &.ant-btn-background-ghost {
+      color: $btn-primary-ghost-color;
+      border-radius: $btn-border-radius;
+      border-color: $btn-primary-ghost-border-color;
+
+      &:focus,
+      &:hover {
+        color: $btn-primary-ghost-hover-color;
+        border-color: $btn-primary-ghost-hover-border-color;
+        svg {
+          color: $btn-primary-ghost-hover-color;
+        }
+      }
+    }
+
+    &[disabled] {
+      background-color: $btn-primary-disabled-bg;
+      color: $btn-primary-disabled-color;
+
+      &:hover,
+      &:focus {
+        background-color: $btn-primary-disabled-bg;
+        color: $btn-primary-disabled-color;
+        svg {
+          color: $btn-primary-disabled-color;
+        }
+      }
+    }
+
+    &.ant-btn-dangerous {
+      color: $btn-primary-danger-color;
+      background-color: $btn-primary-danger-bg;
+      border-color: $btn-primary-danger-border-color;
+    }
+  }
+
+  &-circle {
+    svg {
+      margin-right: 0;
+    }
+  }
+  &-icon-only {
+    .anticon {
+      font-size: 0;
+    }
+
+    svg {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+  &.ant-btn-text {
+    background-color: transparent;
+    color: $btn-text-color;
+    svg {
+      color: $btn-text-color;
+    }
+    &:hover {
+      color: $btn-text-color-hover;
+      background-color: transparent;
+      svg {
+        color: $btn-text-color-hover;
+      }
+    }
+    &[disabled] {
+      svg {
+        color: $btn-text-color-disabled;
+      }
+      &:hover {
+        svg {
+          color: $btn-text-color-disabled;
+        }
+      }
+    }
+  }
+  &.ant-btn-link {
+    background-color: transparent;
+    color: $btn-link-color;
+    svg {
+      color: $btn-link-color;
+    }
+    &:hover {
+      color: $btn-link-color-hover;
+      background-color: transparent;
+      svg {
+        color: $btn-link-color-hover;
+      }
+    }
+    &[disabled] {
+      svg {
+        color: $btn-link-color-disabled;
+      }
+      &:hover {
+        svg {
+          color: $btn-link-color-disabled;
+        }
+      }
+    }
+  }
+}
+
+/* >>> Datepicker 日期  */
+$datepicker-disabled-background-size: var(--custom-datepicker-disabled-background-size, 10px);
+
+$datepicker-separator-text-color: var(--custom-datepicker-separator-text-color, #181f43bf);
+
+$datepicker-dropdown-bg: var(--custom-datepicker-dropdown-bg-color, #ffffffff);
+$datepicker-dropdown-range-bg: var(--custom-datepicker-dropdown-range-bg, #4c5cdb1f);
+$datepicker-dropdown-text-color: var(--custom-datepicker-dropdown-text-color, #181f43ff);
+$datepicker-dropdown-boxshadow: var(--custom-datepicker-dropdown-boxshadow, "0px 6px 24px 0px rgba(24, 31, 67, 0.12)");
+$datepicker-dropdown-border-color: var(--custom-datepicker-dropdown-inner-border-color, #181f4314);
+
+$datepicker-dropdown-hover-bg-color: var(--custom-datepicker-dropdown-hover-bg-color, #1827430a);
+$datepicker-dropdown-selected-bg-color: var(--custom-datepicker-dropdown-selected-bg-color, #4c5cdbff);
+
+$timepicker-bg: var(--custom-timepicker-bg, #ffffffff);
+$timepicker-text-color: var(--custom-timepicker-text-color, #181f43ff);
+$timepicker-active-bg: var(--custom-timepicker-active-bg, #4c5cdb14);
+$timepicker-active-text-color: var(--custom-timepicker-active-text-color, #4c5cdbff);
+$timepicker-hover-bg: var(--custom-timepicker-hover-bg, #1827430a);
+$timepicker-hover-text-color: var(--custom-timepicker-hover-text-color, #181f43ff);
+.ant-picker {
+  border-radius: $input-border-radius;
+  border-color: transparent;
+  background-color: $input-bg;
+  &.ant-picker-status-error {
+    background-color: $input-background-hover-color;
+    &:not([disabled]):hover {
+      background-color: $input-background-hover-color;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $input-background-hover-color;
+    border-color: $input-hover-border-color;
+    box-shadow: 0 0 0 3px $input-box-shadow;
+  }
+  &-focused {
+    background-color: $input-background-hover-color;
+    border-color: $input-hover-border-color;
+    box-shadow: 0 0 0 3px $input-box-shadow;
+  }
+  &-prefix,
+  &-suffix {
+    .anticon {
+      color: $input-icon-color;
+    }
+  }
+
+  &.ant-picker-disabled {
+    color: inherit;
+    background: $input-bg
+      linear-gradient(
+        -45deg,
+        $input-bg 0,
+        $input-bg 5%,
+        transparent 5%,
+        transparent 50%,
+        $input-bg 50%,
+        $input-bg 55%,
+        transparent 55%,
+        transparent
+      );
+    background-size: $datepicker-disabled-background-size $datepicker-disabled-background-size;
+    border-color: transparent;
+    box-shadow: none;
+
+    &:hover {
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  &-large {
+    .ant-picker-input > input {
+      font-size: $font-size-base;
+    }
+  }
+
+  &-input {
+    & > input {
+      color: $input-color;
+
+      &[disabled] {
+        color: inherit;
+      }
+      &::-webkit-input-placeholder {
+        color: $input-placeholder-color;
+      }
+    }
+  }
+
+  &-clear {
+    background-color: $input-bg;
+    svg {
+      color: $input-icon-color;
+    }
+  }
+
+  &-range-separator {
+    .ant-picker-separator {
+      color: $datepicker-separator-text-color;
+    }
+  }
+
+  &-range {
+    .ant-picker-active-bar {
+      background: $primary-color;
+    }
+  }
+
+  &-panel-container {
+    background-color: $datepicker-dropdown-bg;
+    box-shadow: $datepicker-dropdown-boxshadow;
+  }
+
+  &-panel {
+    border-color: $datepicker-dropdown-border-color;
+    .ant-picker-footer {
+      border-color: $datepicker-dropdown-border-color;
+
+      .ant-picker-today-btn {
+        color: $primary-color;
+      }
+    }
+  }
+  &-week-panel-row:hover {
+    td {
+      background: $datepicker-dropdown-hover-bg-color;
+    }
+  }
+  &-week-panel-row-selected {
+    td {
+      background: $datepicker-dropdown-selected-bg-color;
+    }
+    &:hover td {
+      background: $datepicker-dropdown-selected-bg-color;
+    }
+  }
+
+  &-decade-panel,
+  &-year-panel,
+  &-time-panel,
+  &-date-panel,
+  &-month-panel {
+    border-left-color: $datepicker-dropdown-border-color !important;
+  }
+
+  &-header {
+    border-bottom-color: $datepicker-dropdown-border-color;
+    & > button {
+      color: $text-color-icon;
+      &:hover {
+        color: $datepicker-dropdown-text-color;
+      }
+    }
+
+    &-view {
+      color: $datepicker-dropdown-text-color;
+      & > button {
+        color: $text-color-tip;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  &-content {
+    th {
+      color: $datepicker-dropdown-text-color;
+    }
+  }
+
+  &-cell {
+    color: $text-color-tip;
+
+    &.ant-picker-cell-in-view {
+      color: $text-color-base;
+      &.ant-picker-cell-in-range::before {
+        background-color: $datepicker-dropdown-range-bg !important;
+      }
+
+      &.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single)::before,
+      &.ant-picker-cell-range-end:not(.ant-picker-cell-range-end-single)::before {
+        background-color: $datepicker-dropdown-range-bg !important;
+      }
+
+      &.ant-picker-cell-selected,
+      &.ant-picker-cell-range-start,
+      &.ant-picker-cell-range-end {
+        .ant-picker-cell-inner {
+          background-color: $primary-color;
+        }
+      }
+
+      &.ant-picker-cell-in-range.ant-picker-cell-range-hover-start .ant-picker-cell-inner::after,
+      &.ant-picker-cell-in-range.ant-picker-cell-range-hover-end .ant-picker-cell-inner::after {
+        background-color: $primary-color;
+      }
+
+      &.ant-picker-cell-range-hover-start:not(.ant-picker-cell-in-range):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end)::after,
+      &.ant-picker-cell-range-hover-end:not(.ant-picker-cell-in-range):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end)::after,
+      &.ant-picker-cell-range-hover-start.ant-picker-cell-range-start-single::after,
+      &.ant-picker-cell-range-hover-start.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-end-near-hover::after,
+      &.ant-picker-cell-range-hover-end.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-start-near-hover::after,
+      &.ant-picker-cell-range-hover-end.ant-picker-cell-range-end-single::after,
+      &.ant-picker-cell-range-hover:not(.ant-picker-cell-in-range)::after {
+        border-color: $primary-color;
+      }
+    }
+    &:hover {
+      .ant-picker-cell-inner {
+        background-color: $upload-list-hover-bg !important;
+      }
+    }
+
+    .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover::before,
+    .ant-picker-cell-in-view.ant-picker-cell-range-start.ant-picker-cell-range-hover::before,
+    .ant-picker-cell-in-view.ant-picker-cell-range-end.ant-picker-cell-range-hover::before,
+    .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single).ant-picker-cell-range-hover-start::before,
+    .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-range-end-single).ant-picker-cell-range-hover-end::before,
+    .ant-picker-panel
+      > :not(.ant-picker-date-panel)
+      .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start::before,
+    .ant-picker-panel
+      > :not(.ant-picker-date-panel)
+      .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-end::before {
+      background-color: $primary-color;
+    }
+
+    &.ant-picker-cell-disabled {
+      .ant-picker-cell-inner {
+        color: $text-color-disabled;
+      }
+    }
+  }
+
+  .ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
+  .ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end)
+    .ant-picker-cell-inner {
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  .ant-picker-cell-range-hover-end.ant-picker-cell-in-range .ant-picker-cell-inner {
+    color: #fff;
+  }
+
+  .ant-picker-cell-today .ant-picker-cell-inner {
+    color: $primary-color;
+
+    &::before {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      right: 0;
+      top: 0;
+      left: auto;
+      background-color: $primary-color;
+      border: 0 none;
+    }
+  }
+
+  .ant-picker-cell-selected .ant-picker-cell-inner {
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  &-time-panel-column {
+    &:not(:first-child) {
+      border-left-color: $datepicker-dropdown-border-color;
+    }
+
+    > li {
+      &.ant-picker-time-panel-cell {
+        .ant-picker-time-panel-cell-inner {
+          color: $timepicker-text-color;
+          width: 28px;
+          padding: 0;
+          text-align: center;
+          margin-left: 12px;
+          background-color: $timepicker-bg;
+          &:hover {
+            background-color: $timepicker-hover-bg;
+            color: $timepicker-hover-text-color;
+          }
+        }
+
+        &-selected {
+          .ant-picker-time-panel-cell-inner {
+            background-color: $timepicker-active-bg;
+            color: $timepicker-active-text-color;
+            &:hover {
+              background-color: $timepicker-active-bg;
+              color: $timepicker-active-text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-ok {
+    .ant-btn-primary {
+      &[disabled] {
+        border-color: transparent;
+        background-color: $btn-primary-disabled-bg;
+        color: #fff;
+      }
+    }
+  }
+
+  &-range-arrow {
+    &::after {
+      border-color: $datepicker-dropdown-bg $datepicker-dropdown-bg transparent transparent;
+    }
+  }
+}
+
+/* >>> Select 下拉  */
+$select-border-radius: var(--custom-select-border-radius, 3px);
+$select-box-shadow: var(--custom-select-focus-boxshadow, #4c5cdb1f);
+$select-disabled-background-size: var(--custom-select-disabled-background-size, 10px);
+
+$select-color: var(--custom-select-text-color, #181f43ff);
+$select-svg-color: var(--custom-select-icon-color, #818a9e);
+$select-bg: var(--custom-select-bg-color, #1827430a);
+
+$select-placeholder-color: var(--custom-select-placeholder-color, #181f434d);
+$select-hover-bg: var(--custom-select-hover-bg, #ffffffff);
+$select-hover-border-color: var(--custom-select-hover-border-color, #4c5cdbcc);
+$select-multiple-border-color: var(--custom-select-multiple-border-color, #181f431f);
+
+$select-border-color: var(--custom-select-border-color, #ffffff0f);
+$select-disabled-text-color: var(--custom-select-disabled-text-color, #ffffffbf);
+$select-disabled-bg-color: var(
+  --custom-select-disabled-bg-color,
+  linear-gradient(
+    -45deg,
+    #1827430a 0,
+    #1827430a 5%,
+    transparent 5%,
+    transparent 50%,
+    #1827430a 50%,
+    #1827430a 55%,
+    transparent 55%,
+    transparent
+  )
+);
+$select-disabled-border-color: var(--custom-select-disabled-border-color, #ffffff0f);
+$select-disabled-icon-color: var(--custom-select-disabled-icon-color, #b1b1b2ff);
+
+$select-dropdown-bg: var(--custom-select-dropdown-bg-color, #ffffffff);
+$select-dropdown-color: var(--custom-select-dropdown-text-color, #181f43ff);
+$select-dropdown-option-active-color: var(--custom-select-dropdown-option-active-color, #4c5cdbff);
+$select-dropdown-option-active-bg: var(--custom-select-dropdown-option-active-bg, #4c5cdb14);
+$select-dropdown-hover-bg-color: var(--custom-select-dropdown-hover-bg-color, #1827430a);
+$select-dropdown-hover-text-color: var(--custom-select-dropdown-hover-text-color, #4c5cdbff);
+$select-dropdown-disabled-bg-color: var(--custom-select-dropdown-disabled-bg-color, transparent);
+$select-dropdown-disabled-text-color: var(--custom-select-dropdown-disabled-text-color, #181f434d);
+.ant-select {
+  color: $select-color;
+
+  &-selection-placeholder {
+    color: $select-placeholder-color;
+  }
+
+  &-clear {
+    background-color: $select-bg;
+    svg {
+      color: $select-svg-color;
+    }
+  }
+  .ant-select-selection-item-remove {
+    color: $select-svg-color;
+  }
+  &-single {
+    &:not(.ant-select-customize-input) {
+      .ant-select-selector {
+        background: $select-bg;
+        border-radius: $select-border-radius;
+        border: 1px solid $select-border-color;
+        transition: none;
+        &:hover {
+          background: $select-hover-bg;
+        }
+        .ant-select-selection-item {
+          color: $select-color;
+        }
+      }
+    }
+
+    &.ant-select-disabled {
+      &:not(.ant-select-customize-input) {
+        .ant-select-selector {
+          background-color: $select-bg;
+          color: inherit;
+        }
+      }
+      background: linear-gradient(
+        -45deg,
+        $select-bg 0,
+        $select-bg 5%,
+        transparent 5%,
+        transparent 50%,
+        $select-bg 50%,
+        $select-bg 55%,
+        transparent 55%,
+        transparent
+      );
+      background-size: $select-disabled-background-size $select-disabled-background-size;
+    }
+  }
+
+  &-lg {
+    font-size: $font-size-base;
+  }
+
+  &-item {
+    padding: 5px 8px;
+    border-radius: $select-border-radius;
+
+    & + .ant-select-item {
+      margin-top: 4px;
+    }
+  }
+
+  &-option {
+    &-active:not(&-disabled) {
+      background-color: $select-bg;
+    }
+    &-selected:not(&-disabled) {
+      color: $primary-color;
+      background-color: $select-bg;
+      font-weight: normal;
+    }
+  }
+
+  &:not(.ant-select-disabled):hover .ant-select-selector,
+  &.ant-select-focused:not(.ant-select-disabled):not(.ant-select-customize-input) .ant-select-selector {
+    box-shadow: 0 0 0 3px $select-box-shadow;
+    border-color: $select-hover-border-color;
+    background-color: $select-hover-bg;
+  }
+
+  &.ant-select-multiple {
+    .ant-select-selection-item {
+      background-color: $select-bg;
+      border-color: $select-multiple-border-color;
+    }
+
+    .ant-select-selector {
+      background: $select-bg;
+      border-radius: $select-border-radius;
+      border-color: transparent;
+      transition: none;
+
+      &:hover {
+        background: $select-hover-bg;
+      }
+    }
+
+    &.ant-select-disabled {
+      &-arrow {
+        color: $select-disabled-icon-color;
+      }
+      &:not(.ant-select-customize-input) {
+        .ant-select-selector {
+          background-color: $select-bg;
+          color: $select-disabled-text-color;
+          border-color: $select-disabled-border-color;
+        }
+      }
+      background: $select-disabled-bg-color;
+      background-size: $select-disabled-background-size $select-disabled-background-size;
+    }
+  }
+
+  &-dropdown {
+    padding: 8px;
+    background-color: $select-dropdown-bg;
+
+    .ant-select-item {
+      color: $select-dropdown-color;
+
+      &.ant-select-item-option-active {
+        background-color: $select-dropdown-hover-bg-color;
+        color: $select-dropdown-hover-text-color;
+      }
+
+      &.ant-select-item-option-selected {
+        background-color: $select-dropdown-option-active-bg;
+        color: $select-dropdown-option-active-color;
+        .ant-select-item-option-state {
+          color: $select-dropdown-option-active-color;
+        }
+      }
+      &.ant-select-item-option-disabled {
+        background: $select-dropdown-disabled-bg-color;
+        color: $select-dropdown-disabled-text-color;
+      }
+    }
+  }
+  &-arrow {
+    color: $select-svg-color;
+  }
+  &-status-error.ant-select:not(.ant-select-disabled):not(.ant-select-customize-input) .ant-select-selector {
+    background-color: $select-hover-bg;
+  }
+}
+.ant-select-tree {
+  background-color: $select-dropdown-bg;
+  color: $select-dropdown-color;
+  .ant-select-tree-node-content-wrapper:hover {
+    background-color: $select-dropdown-hover-bg-color;
+    color: $select-dropdown-hover-text-color;
+  }
+  .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
+    background-color: $select-dropdown-hover-bg-color;
+  }
+}
+/* >>> Dropdown 下拉浮框  */
+$dropdown-menu-bg: var(--custom-dropdown-menu-bg, #ffffff);
+$dropdown-border-radius: var(--custom-dropdown-border-radius-base, 3px);
+$dropdown-menu-box-shadow: var(--custom-dropdown-menu-box-shadow, #181f4319);
+$dropdown-menu-item-color: var(--custom-dropdown-menu-item-color, #181f43ff);
+$dropdown-menu-item-hover-bg: var(--custom-dropdown-menu-item-hover-bg, #1827430a);
+.ant-dropdown {
+  border-radius: $dropdown-border-radius;
+  &-arrow {
+    background: $dropdown-menu-bg;
+    &::before {
+      background: $dropdown-menu-bg;
+    }
+  }
+  &-menu {
+    min-width: 120px;
+    padding: 8px 0;
+    border-radius: $dropdown-border-radius;
+    box-shadow: 0px 6px 24px 0px $dropdown-menu-box-shadow;
+    background-color: $dropdown-menu-bg;
+    .ant-dropdown-menu-item,
+    .ant-dropdown-menu-submenu-title {
+      color: $dropdown-menu-item-color;
+      &:hover {
+        background-color: $dropdown-menu-item-hover-bg;
+      }
+    }
+  }
+}
+
+/* >>> Tree 树组件 */
+$tree-bg: var(--custom-tree-bg, #ffffffff);
+$tree-text-color: var(--custom-tree-text-color, #181f43bf);
+$tree-checkbox-bg: var(--custom-tree-checkbox-bg, #ffffffff);
+$tree-checkbox-border-color: var(--custom-tree-checkbox-border-color, #181f431f);
+$tree-checkbox-checked-bg: var(--custom-tree-checkbox-checked-bg, #4c5cdbff);
+$tree-checkbox-checked-border-color: var(--custom-tree-checkbox-checked-border-color, #4c5cdbff);
+$tree-node-hover-bg: var(--custom-tree-node-hover-bg, #1827430a);
+$tree-node-section-bg: var(--custom-tree-node-section-bg, #1827430a);
+$tree-node-section-text-color: var(--custom-tree-node-text-color, #4c5cdbff);
+.ant-tree {
+  background-color: $tree-bg;
+
+  &-node-content-wrapper {
+    color: $text-color-subtitle !important;
+  }
+
+  &-switcher-icon {
+    color: $tree-text-color;
+  }
+
+  &-checkbox-inner {
+    background-color: $tree-checkbox-bg;
+    border-color: $tree-checkbox-border-color;
+  }
+
+  &-checkbox-wrapper:hover .ant-tree-checkbox-inner,
+  &-checkbox:hover .ant-tree-checkbox-inner,
+  &-checkbox-input:focus + .ant-tree-checkbox-inner {
+    border-color: $tree-checkbox-border-color;
+  }
+
+  &-checkbox-indeterminate {
+    .ant-tree-checkbox-inner::after {
+      background-color: $tree-checkbox-bg;
+    }
+  }
+
+  &-checkbox-checked {
+    .ant-tree-checkbox-inner {
+      background-color: $tree-checkbox-checked-bg;
+      border-color: $tree-checkbox-checked-border-color;
+    }
+  }
+}
+
+/* >>> Table 表格*/
+$table-font-size: var(--custom-table-font-size, 14px);
+$table-bg: var(--custom-table-bg-color, #ffffffff);
+$table-color: var(--custom-table-text-color, #181f43bf);
+$table-header-bg: var(--custom-table-header-bg-color, #ffffffff);
+$table-header-color: var(--custom-table-header-text-color, #000000d8);
+$table-selected-row-bg: var(--custom-table-selected-row-bg, #4c5cdb0f);
+$table-border-color: var(--custom-table-border-color, #181f431f);
+$table-border-radius-base: var(--custom-table-border-radius-base, 0);
+$table-row-hover-bg: var(--custom-table-row-hover-bg-color, #4c5cdb0f);
+.ant-table {
+  font-size: $table-font-size;
+  background: $table-bg;
+  border-radius: $table-border-radius-base;
+
+  .ant-table-container::after {
+    width: 8px;
+    background-color: $table-bg;
+  }
+
+  table {
+    border-radius: $table-border-radius-base $table-border-radius-base 0 0;
+  }
+
+  &-summary {
+    background: $table-bg;
+
+    div {
+      box-shadow: 0 -$border-width-base 0 $table-border-color;
+    }
+
+    > tr {
+      > th,
+      > td {
+        border-bottom: $border-width-base $border-style-base $table-border-color;
+      }
+    }
+  }
+
+  &-cell-fix-left,
+  &-cell-fix-right {
+    background: $table-bg;
+  }
+
+  &-thead {
+    > tr {
+      > th {
+        font-weight: $font-weight-base;
+        color: $table-header-color;
+        background: $table-header-bg;
+        border-top: $border-width-base $border-style-base $table-border-color;
+        border-bottom: $border-width-base $border-style-base $table-border-color;
+        &:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-thead th.ant-table-column-sort {
+    background: $table-bg;
+  }
+
+  &-column-sorter {
+    &-up,
+    &-down {
+      &.active {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &-tbody {
+    > tr {
+      > td {
+        background-color: $table-bg;
+        color: $table-color;
+        border-bottom: $border-width-base $border-style-base $table-border-color;
+      }
+
+      &.ant-table-row:hover > td,
+      > td.ant-table-cell-row-hover {
+        background: $table-row-hover-bg;
+      }
+
+      &.ant-table-row-selected {
+        > td {
+          background: $table-selected-row-bg;
+        }
+      }
+    }
+  }
+
+  &-tbody > tr.ant-table-placeholder {
+    &:hover {
+      > td {
+        background: $table-bg;
+      }
+    }
+  }
+
+  &-filter-dropdown {
+    &-btns {
+      border-top: $border-width-base $border-style-base $table-border-color;
+    }
+  }
+
+  &-row-expand-icon {
+    border: $border-width-base $border-style-base $table-border-color;
+  }
+
+  &-sticky {
+    &-scroll {
+      border-top: 1px solid $table-border-color;
+    }
+  }
+}
+.ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis {
+  color: var(--custom-pagination-color, #181f43bf);
+}
+.ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis {
+  color: var(--custom-pagination-color, #181f43bf);
+}
+/* >>> Pagination 分页*/
+$pagination-item-bg: var(--custom-pagination-bg, #ffffffff);
+$pagination-item-color: var(--custom-pagination-color, #181f43bf);
+$pagination-item-bg-active: var(--custom-pagination-item-bg-active, #4c5cdb14);
+$pagination-item-disabled-color: var(--custom-pagination-item-disabled-color, #181f434d);
+$pagination-mini-options-size-changer-top: 0px;
+.ant-pagination {
+  &-item,
+  &-prev,
+  &-next {
+    color: $pagination-item-color;
+    background-color: $pagination-item-bg;
+    border-color: transparent;
+    a {
+      background-color: $pagination-item-bg;
+      color: $pagination-item-color;
+    }
+    &:focus-visible,
+    &:hover {
+      border-color: transparent;
+      a {
+        background-color: $pagination-item-bg-active;
+        color: $primary-color;
+      }
+    }
+
+    .ant-pagination-item-link {
+      color: $pagination-item-color;
+      background-color: $pagination-item-bg;
+      border-color: transparent;
+    }
+
+    &-active {
+      border-color: transparent;
+
+      a {
+        background: $pagination-item-bg-active;
+        color: $primary-color;
+      }
+
+      &:focus-visible,
+      &:hover {
+        border-color: transparent;
+      }
+
+      &:focus-visible a,
+      &:hover a {
+        background: $pagination-item-bg-active;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .ant-pagination-total-text {
+    span {
+      color: $pagination-item-color;
+    }
+  }
+
+  &-disabled {
+    &,
+    &:hover,
+    &:focus-visible {
+      cursor: not-allowed;
+      .ant-pagination-item-link {
+        border-color: transparent;
+        background-color: transparent;
+        color: $pagination-item-disabled-color;
+      }
+    }
+  }
+}
+
+/* Steps */
+.ant-steps {
+  &-item-process,
+  &-item-finish,
+  &-item-active {
+    .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+      background-color: $primary-color;
+    }
+  }
+}
