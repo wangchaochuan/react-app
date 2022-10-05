@@ -4,7 +4,6 @@ import App from '@/App';
 import reportWebVitals from '@/reportWebVitals';
 import { isInMicroApp } from '@/utils';
 import 'moment/locale/zh-cn';
-import 'antd/dist/antd.css';
 import '@/index.scss';
 import '@/public-path';
 
