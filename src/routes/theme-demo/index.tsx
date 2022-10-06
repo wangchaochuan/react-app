@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import {
   Drawer,
   Cascader,
@@ -722,4 +722,4 @@ const ModelRule = () => {
   );
 };
 
-export default ModelRule;
+export default memo(ModelRule);

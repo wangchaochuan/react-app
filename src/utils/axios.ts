@@ -54,6 +54,7 @@ const createAxios = (config?: AxiosRequestConfig) => {
       });
     }
   );
+  return instance;
 };
 
 export default createAxios;
@@ -63,3 +64,4 @@ const SERVICE_ENDPOINT = 'http://localhost:8080'; // 实际使用过程中为后
 const baseURL = `${SERVICE_ENDPOINT}/api/ioc-main/v1`;
 
 export const baseAxios = createAxios({ baseURL, timeout: 1000 * 10 });
+export const mockAxios = createAxios({ baseURL: '' });

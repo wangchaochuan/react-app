@@ -1,15 +1,21 @@
-import { FC } from 'react';
-import { Button, Input, Select } from 'antd';
-import styles from './index.module.scss';
+import { FC, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Button, Input, Select } from 'antd';
 import { dayOfYear, byteSize, isBrowser } from 'wangcc-utils';
+import { fetchAuthInfo } from '@/services/user';
+import styles from './index.module.scss';
 
 const Home: FC = () => {
   const navigate = useNavigate();
   const jump = () => {
     navigate('/product');
   };
-  console.log(dayOfYear(), byteSize('wang'), isBrowser());
+  useEffect(() => {
+    console.log(dayOfYear(), byteSize('wang'), isBrowser());
+    fetchAuthInfo().then(res => {
+      console.info(res.data);
+    });
+  }, []);
   return (
     <div className={styles.home}>
       <Select size="large" placeholder="请选择" style={{ width: '200px', marginBottom: '8px' }}>
@@ -20,7 +26,7 @@ const Home: FC = () => {
       </Select>
       <Input size="large" placeholder="请输入" />
       <div className={styles.header}>react app home</div>
-      <Button size="large" onClick={jump}>
+      <Button size="large" onClick={jump.bind(null)}>
         跳转
       </Button>
     </div>

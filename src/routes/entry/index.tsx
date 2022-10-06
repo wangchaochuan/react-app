@@ -16,8 +16,8 @@ const Main = () => {
       <Route path={`${ROUTES.INDEX}*`} element={<SuspenseWrap render={<Layout />}></SuspenseWrap>}>
         <Route path={`${ROUTES.HOME}`} element={<SuspenseWrap render={<Home />} />}></Route>
         <Route path={`${ROUTES.PRODUCT}`} element={<SuspenseWrap render={<Product />} />}></Route>
-        <Route path={`${ROUTES.COMMON_DEMO}/*`} element={<SuspenseWrap render={<CommonDemo />} />} />
         <Route path={`${ROUTES.THEME_DEMO}/*`} element={<SuspenseWrap render={<ThemeDemo />} />}></Route>
+        <Route path={`${ROUTES.COMMON_DEMO}/*`} element={<SuspenseWrap render={<CommonDemo />} />}></Route>
         <Route index element={<Navigate to={ROUTES.HOME} replace />}></Route>
       </Route>
     </Routes>

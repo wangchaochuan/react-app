@@ -12,12 +12,12 @@ export function transformToRoutes(r: any[]) {
   return r.map((item: { module: any; name: string }, index: number) => {
     const { module, name } = item;
     const Component = module.default;
-    // if (!index) {
-    //   return {
-    //     index: true,
-    //     element: <Component />,
-    //   };
-    // }
+    if (!index) {
+      return {
+        index: true,
+        element: <Component />,
+      };
+    }
     return {
       path: name,
       element: <Component />,

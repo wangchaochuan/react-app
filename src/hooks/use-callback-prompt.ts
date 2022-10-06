@@ -1,12 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useCallback, useEffect, useState } from 'react';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import useBlocker from '@/hooks/use-blocker';
 
 function useCallbackPrompt(when: boolean): [boolean, () => void, () => void] {
   const navigate = useNavigate();
   const location = useLocation();
-  const { projectId } = useParams();
 
   const [showPrompt, setShowPrompt] = useState(false);
   const [lastLocation, setLastLocation] = useState<any>(null);

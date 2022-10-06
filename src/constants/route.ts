@@ -1,6 +1,6 @@
 const INDEX = '/';
-const HOME = 'theme-demo';
-const PRODUCT = 'theme-demo';
+const HOME = 'home';
+const PRODUCT = 'product';
 const THEME_DEMO = 'theme-demo';
 const COMMON_DEMO = 'common-demo';
 
