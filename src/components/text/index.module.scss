@@ -1,0 +1,25 @@
+ @import "@styles/antd.variable.scss";
+
+.container {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: $text-color-base;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.tooltip {
+  span {
+    margin-right: 8px;
+  }
+  :global {
+    .ant-tooltip-inner {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+  }
+}

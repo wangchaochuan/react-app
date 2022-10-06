@@ -1,15 +1,23 @@
-import { FC, Fragment } from 'react';
-import { NavLink } from 'react-router-dom';
+import { FC, Fragment, useMemo } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { ROUTES } from '@constants/route';
 import { isInMicroApp } from '@/utils';
 import styles from './header.module.scss';
 
 const Header: FC = () => {
+  const location = useLocation();
   const routes = [
-    { path: `/${ROUTES.Home}`, name: '主页' },
-    { path: `/${ROUTES.Product}`, name: '产品' },
+    { path: `/${ROUTES.HOME}`, name: '主页' },
+    { path: `/${ROUTES.PRODUCT}`, name: '产品' },
   ];
-  if (isInMicroApp) {
+  const shouldHideHeader = useMemo<boolean>(() => {
+    const pathname = location.pathname;
+    if (pathname.includes(ROUTES.COMMON_DEMO) || pathname.includes(ROUTES.THEME_DEMO)) {
+      return true;
+    }
+    return false;
+  }, [location.pathname]);
+  if (isInMicroApp || shouldHideHeader) {
     return null;
   }
   return (

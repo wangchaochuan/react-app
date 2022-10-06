@@ -1,0 +1,16 @@
+@import "@styles/antd.variable.scss";
+
+.name {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  line-height: 1;
+  background-color: $primary-color;
+  font-size: 12px;
+  font-weight: bold;
+
+  &.round {
+    border-radius: 50%;
+  }
+}

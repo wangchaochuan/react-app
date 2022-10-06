@@ -1,0 +1,23 @@
+@import "@styles/antd.variable.scss";
+
+.common-demo-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+
+  :global {
+    .layout-list {
+      width: 220px;
+      .ant-menu {
+        height: 100%;
+      }
+      .ant-menu-dark .ant-menu-item {
+        color: gray;
+      }
+    }
+    .layout-content {
+      flex: auto;
+    }
+  }
+}

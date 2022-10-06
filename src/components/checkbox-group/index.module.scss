@@ -1,0 +1,34 @@
+.checkbox {
+  :global {
+    .ant-checkbox-wrapper.ant-checkbox-group-item {
+      border-radius: 3px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 9px;
+      background: var(--custom-select-bg-color);
+      position: relative;
+      overflow: hidden;
+      &.ant-checkbox-wrapper-checked {
+        &::before {
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          width: 0;
+          height: 0;
+          border: 8px solid var(--custom-primary-color-active);
+          border-bottom-color: transparent;
+          border-top-color: transparent;
+          border-left-color: transparent;
+          transform: rotateZ(135deg);
+          content: "";
+        }
+        background: #4C5CDB14;
+        color: var(--custom-primary-color-active);
+      }
+      .ant-checkbox {
+        display: none;
+      }
+    }
+  }
+}

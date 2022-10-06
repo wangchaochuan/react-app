@@ -1,0 +1,33 @@
+@import "@styles/antd.variable.scss";
+.coding-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $body-background;
+    & > .image-container {
+        position: relative;
+        width: 451px;
+        height: 303px;
+        & > .image {
+            width: 100%;
+        }
+        & > .title {
+            position: absolute;
+            top: 156px;
+            left: -35px;
+            font-size: 24px;
+            font-weight: 400;
+            color: $text-color-caption;
+        }
+        & > .coding {
+            position: absolute;
+            top: 196px;
+            left: -35px;
+            font-size: 32px;
+            font-weight: bold;
+            color: $text-color-title;
+        }
+    }
+}

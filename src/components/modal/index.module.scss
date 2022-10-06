@@ -1,0 +1,46 @@
+@import '@styles/antd.variable.scss';
+
+.close {
+  font-size: 20px;
+
+  &:hover {
+    color: $text-color-base;
+  }
+}
+
+.confirm {
+  margin-top: -1px;
+  margin-right: 16px;
+  color: var(--custom-warning-color);
+  font-size: 20px;
+}
+
+.cancel {
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
+
+.modal-warn {
+  .confirm {
+    color: var(--custom-warning-color);
+  }
+  .quit {
+    float: left;
+    margin-left: 30px;
+  }
+  :global {
+    .ant-modal-header {
+      border: none;
+    }
+    .ant-modal-footer {
+      border: none;
+    }
+    .ant-modal-body {
+      padding-left: 60px;
+    }
+  }
+}

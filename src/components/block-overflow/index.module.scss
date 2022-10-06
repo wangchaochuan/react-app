@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    align-items: center;
+
+    :global {
+        .rc-overflow-item {
+            max-width: 100%;
+        }
+
+        .rc-overflow-item-rest {
+            width: auto;
+        }
+
+        .icon-wrap {
+            height: 100%;
+            margin-left: 5px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
