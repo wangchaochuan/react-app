@@ -33,7 +33,7 @@ interface PopoverProps {
 
 const defaultGetPopupContainer: AbstractTooltipProps['getTooltipContainer'] = c => c;
 
-function EnnPopover(props: PopoverProps, ref: React.Ref<unknown> | undefined) {
+function ReactPopover(props: PopoverProps, ref: React.Ref<unknown> | undefined) {
   const {
     overlayClassName,
     title,
@@ -142,4 +142,4 @@ function EnnPopover(props: PopoverProps, ref: React.Ref<unknown> | undefined) {
   );
 }
 
-export default React.memo(forwardRef(EnnPopover));
+export default React.memo(forwardRef(ReactPopover));
