@@ -2180,7 +2180,7 @@ $table-row-hover-bg: var(--custom-table-row-hover-bg-color, #4c5cdb0f);
     background: $table-bg;
 
     div {
-      box-shadow: 0 -$border-width-base 0 $table-border-color;
+      box-shadow: 0 (-$border-width-base) 0 $table-border-color;
     }
 
     > tr {

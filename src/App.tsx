@@ -1,8 +1,11 @@
 import { memo, FC, Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
+import moment from 'moment';
 import zh_CN from 'antd/es/locale/zh_CN';
 import Main from '@/routes/entry';
+import 'moment/locale/zh-cn'; // 手动引入中文语言包
+moment.locale('zh-cn');
 
 /* mock */
 if (process.env.NODE_ENV === 'development') {
