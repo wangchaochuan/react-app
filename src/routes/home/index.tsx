@@ -11,6 +11,7 @@ const Home: FC = () => {
     navigate('/product');
   };
   useEffect(() => {
+    console.log(1111222);
     console.log(dayOfYear(), byteSize('wang'), isBrowser());
     fetchAuthInfo().then(res => {
       console.info(res.data);
