@@ -38,9 +38,11 @@
     "terser-webpack-plugin": "^5.3.6",
     "thread-loader": "^3.0.4",
     "webpack-bundle-analyzer": "^4.6.1",
+    "webpack-cli": "^4.10.0",
     "webpackbar": "^5.0.2"
   },
   "scripts": {
+    "dll": "webpack --config webpack.dll.js",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
