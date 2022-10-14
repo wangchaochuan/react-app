@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import dayjs from 'dayjs';
 import App from '@/App';
 import reportWebVitals from '@/reportWebVitals';
 import { isInMicroApp } from '@/utils';
-import 'moment/locale/zh-cn';
+import 'dayjs/locale/zh-cn';
 import '@/index.scss';
 import '@/public-path';
+dayjs.locale('zh-cn');
 
 function render(root: ReactDOM.Root, basename: string) {
   root.render(

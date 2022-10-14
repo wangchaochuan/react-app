@@ -1,11 +1,12 @@
 const path = require('path');
 const { addBeforeLoaders, removeLoaders, loaderByName } = require('@craco/craco');
-const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const WebpackBar = require('webpackbar');
 const TerserPlugin = require('terser-webpack-plugin');
+const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const { DllReferencePlugin } = require('webpack');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const smp = new SpeedMeasurePlugin();
 const { name } = require('./package.json');
 const manifest = require('./public/lib/vendor.json');
@@ -48,13 +49,7 @@ module.exports = {
       '@utils': pathResolve('src/utils'),
       '@contexts': pathResolve('src/contexts'),
     },
-    plugins: [
-      new WebpackBar(),
-      new DllReferencePlugin({
-        // 将manifest字段配置成我们第1步中打包出来的json文件
-        manifest,
-      }),
-    ],
+    plugins: [new WebpackBar(), new DllReferencePlugin({ manifest }), new AntdDayjsWebpackPlugin()],
     configure(webpackConfig, { env }) {
       // 配置扩展扩展名优化
       webpackConfig.resolve.extensions = ['.tsx', '.ts', '.jsx', '.js', '.scss', '.css', '.json'];
